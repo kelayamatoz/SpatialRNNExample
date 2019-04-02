@@ -1,210 +1,138 @@
 import spatial.dsl._
 
 @spatial
-object AFGEMM extends SpatialApp {
+object RNN extends SpatialApp {
   def main(args: Array[String]): Unit = {
-    type T = FixPt[TRUE, _16, _16]
-    // Try programmable types...
-    // Func sim params
-    val funcSim: scala.Boolean = true // synth: false
-    val defaultPar = 16.to[I32] // synth: 16
-    val basePar = 1.to[I32]
+    // This is describing the LSTM dataflow
+    type lowT = FixPt[TRUE, _4, _4]
+    type highT = FixPt[TRUE, _16, _16]
 
-    // par
-    val defaultLdSt = 1.to[I32]
-    val kPar = defaultPar
-    val nPar = defaultPar
-    val ldPar = defaultLdSt
-    val stPar = defaultLdSt
+    // TODO: how to set these non-linear functions?
+    val activationI: highT => highT = ???
+    val activationJ: highT => highT = ???
+    val activationF: highT => highT = ???
+    val activationO: highT => highT = ???
+    val tanh: highT => highT = ???
 
-    // Problem sizes, unstaged
-    val testSizeU: scala.Int = 4 * 16
-    val lenAU: scala.Int = 16 * testSizeU
-    val lenBU: scala.Int = 16 * 16 * testSizeU
-    val lenCU: scala.Int = 16 * testSizeU
+    // TODO: what should be the parallelization and vectorization pars?
+    val hu = 1
+    val ru = 1
+    val rv = 1
 
-    // Const
-    val baseAddr = 1.to[I32]
-    val baseStride = 1.to[I32]
+    // problem-specific params
+    val batchSize = 1
+    val nHiddenUnits = 128
+    val nFeatures = 128
+    val nTimeSteps = 1
+    val nGates = 4
 
-    // Problem sizes, staged
-    val lenA = I32.apply(lenAU)
-    val lenB = I32.apply(lenBU)
-    val lenC = I32.apply(lenCU)
-
-    // cmd
-    val nCmds = 9.to[Int]
-    val cArgOut = ArgOut[T]
-    val m = 16.to[I32]
-    val n = 16.to[I32]
-    val k = 16.to[I32]
-    val srcAddr = 0.to[I32]
-    val weightAddr = 0.to[I32]
-    val dstAddr = 0.to[I32]
-    val srcStep = 64.to[I32]
-    val weightStep = 64.to[I32]
-    val dstStep = 64.to[I32]
-
-    def genIdxes(range: Int): Array[Int] = Array.tabulate[Int](range){ i => i }
-
-    def getSubMat(srcMat: Array[T], srcAddr: Int): Array[T] = {
-      val idx = genIdxes(srcMat.length)
-      val idxes = idx.filter(_ >= srcAddr)
-      idxes.map(index => srcMat(index))
+    val ijfoDRAMs: scala.Array[DRAM2[lowT]] = scala.Array.tabulate(nGates) {
+      _ =>
+        val re: DRAM2[lowT] = DRAM[lowT](nHiddenUnits, nFeatures + nHiddenUnits)
+        re
     }
-
-    def printMem(mem: SRAM1[T], dim0: Int, name: java.lang.String): Unit = {
-      print("========= ")
-      print(name)
-      println("=========")
-      Foreach (dim0 by 16.to[I32]) { iLen =>
-        Foreach (16.to[I32] by baseStride) { iEle =>
-          val idx = iLen + iEle
-          print(mem(idx)); print(", ")
+    val ijfoData: scala.Array[Matrix[lowT]] = scala.Array.tabulate(nGates) {
+      _ =>
+        val re: Matrix[lowT] = Matrix.tabulate[lowT](
+          nHiddenUnits.to[I32],
+          (nFeatures + nHiddenUnits).to[I32]
+        ) { (_, _) =>
+          random[lowT](1.to[lowT])
         }
-        println("")
-      }
-      println("============================")
+        re
+    }
+    ijfoDRAMs zip ijfoData foreach {
+      case (mem, data) =>
+        setMem(mem, data)
     }
 
-    def verifyArr(srcArr: Array[T], dstArr: Array[T],
-                  m: Int, n: Int, k: Int,
-                  srcStep: Int, weightStep: Int, dstStep: Int): Unit = {
-      genIdxes(m).foreach(i =>
-        genIdxes(n).foreach(j =>
-        {
-          val idx = i * dstStep / 4.to[I32] + j.to[I32]
-          print("srcArr(idx) = ")
-          print(srcArr(idx))
-          print(", ")
-          print("dstArr(idx) = ")
-          print(dstArr(idx))
-          print(", diff = ")
-          print(abs(srcArr(idx) - dstArr(idx)))
-          print(", ")
-        }
-        )
-      )
+    def getVecDRAM(size: I32): DRAM1[lowT] = {
+      val re = DRAM[lowT](size)
+      val reData = Array.tabulate[lowT](size)(_ => random[lowT](1.to[lowT]))
+      setMem(re, reData)
+      re
     }
 
+    val cInitDRAM = getVecDRAM(nHiddenUnits.to[I32])
+    val xhDRAM = getVecDRAM((nFeatures + nHiddenUnits).to[I32])
 
-    val dataA = Array.tabulate[T](lenA){ i => i.to[T] }
-    val dataB = Array.tabulate[T](lenB){ i => i.to[T] }
-    val dataC = Array.empty[T](lenC)
-
-    val aDRAM = DRAM[T](lenA)
-    val bDRAM = DRAM[T](lenB)
-    val cDRAM = DRAM[T](lenC)
-    if (funcSim) {
-      setMem(aDRAM, dataA)
-      setMem(bDRAM, dataB)
+    val biasesDRAM: scala.Array[DRAM1[lowT]] = scala.Array.tabulate(nGates) {
+      _ =>
+        val re: DRAM1[lowT] = getVecDRAM(nHiddenUnits.to[I32])
+        re
     }
 
-    // Verify
-    val matA = getSubMat(dataA, srcAddr)
-    val matB = getSubMat(dataB, weightAddr)
-    val mIdxes = genIdxes(m)
-    val nIdxes = genIdxes(n)
-    val kIdxes = genIdxes(k)
-
-    // Update dataC based on the given formula
-    mIdxes.foreach(i =>
-      nIdxes.foreach(j =>
-        kIdxes.foreach(p =>
-          if (p == 0) {
-            dataC(i * dstStep / 4.to[I32] + j) =
-              matA(i * srcStep / 4.to[I32] + p) *
-                matB(p * weightStep / 4.to[I32] + j)
-          } else {
-            val dataCIdx = i * dstStep / 4.to[I32] + j
-            dataC(dataCIdx) =
-              dataC(dataCIdx) + matA(i * srcStep / 4.to[I32] + p) *
-                matB(p * weightStep / 4.to[I32] + j)
-          }
-        )
-      )
-    )
-
-    def getRandSeq(len: scala.Int): Seq[T] = scala.Seq.tabulate[T](len)(_ => random[T](1.to[T]))
-
-    def getLUTFromSeq(seq: Seq[T]): LUT1[T] = {
-      LUT.apply[T](seq.length)(seq: _*)
-    }
-
-    val matAData = getRandSeq(lenAU)
-    val matBData = getRandSeq(lenBU)
+    val xhResultDRAM: DRAM1[lowT] = DRAM[lowT](nHiddenUnits + nFeatures)
+    val cResultDRAM: DRAM1[lowT] = DRAM[lowT](nHiddenUnits)
 
     Accel {
-//      val matrixA = getLUTFromSeq(matAData)
-//      val matrixB = getLUTFromSeq(matBData)
-      val matrixA = SRAM[T](lenA)
-      val matrixB = SRAM[T](lenB)
-      val matrixC = SRAM[T](lenC)
-
-      val cmdLUT = LUT[I32](9.toInt)(
-        m, n, k,
-        srcAddr, weightAddr, dstAddr,
-        srcStep, weightStep, dstStep
-      )
-      val cmdFIFO = FIFO[I32](nCmds.to[I32])
-
-      // enque CMD FIFO
-      Sequential.Foreach (nCmds by 1.to[I32]) { iCMD =>
-        val cmd = cmdLUT(iCMD)
-        if (funcSim) {
-          println(cmd)
-        }
-        cmdFIFO.enq(cmd)
+      // Load all gates weights and x, c, h data in one shot
+      val ijfoMems: scala.Array[SRAM2[lowT]] = scala.Array.tabulate(nGates) {
+        _ =>
+          val re: SRAM2[lowT] =
+            SRAM[lowT](nHiddenUnits, nFeatures + nHiddenUnits)
+          re
+      }
+      ijfoMems zip ijfoDRAMs foreach {
+        case (sram, dram) =>
+          sram load dram(
+            0.to[I32] :: nHiddenUnits.to[I32],
+            0.to[I32] :: (nFeatures + nHiddenUnits).to[I32]
+          )
       }
 
-      // AXB
-      Pipe {
-        val cmdRF = RegFile[I32](nCmds)
-        Sequential.Foreach (nCmds by baseStride) { iRF =>
-          cmdRF(iRF) = cmdFIFO.deq().to[I32]
-        }
+      val biasesMems: scala.Array[SRAM1[lowT]] = scala.Array.tabulate(nGates) {
+        _ =>
+          val re: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
+          re
+      }
+      biasesMems zip biasesDRAM foreach {
+        case (sram, dram) =>
+          sram load dram(0.to[I32] :: nHiddenUnits.to[I32])
+      }
 
-        // decode
-        val m = cmdRF(0.to[I32])
-        val k = cmdRF(1.to[I32])
-        val n = cmdRF(2.to[I32])
-        val srcAddr = cmdRF(3.to[I32])
-        val weightAddr = cmdRF(4.to[I32])
-        val dstAddr = cmdRF(5.to[I32])
-        val srcStep = cmdRF(6.to[I32])
-        val weightStep = cmdRF(7.to[I32])
-        val dstStep = cmdRF(8.to[I32])
+      val xh: SRAM1[lowT] = SRAM[lowT](nFeatures + nHiddenUnits)
+      val c: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
+      xh load xhDRAM(0.to[I32] :: (nFeatures + nHiddenUnits).to[I32])
+      c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
 
-        Foreach (m by baseStride par basePar) { i =>
-          Foreach (n by baseStride par defaultPar) { j =>
-            val cIdx = i * dstStep / 4.to[I32] + j + dstAddr
-
-            matrixC(cIdx) = Reduce (Reg[T](0.to[T]))(
-              k by baseStride par defaultPar
-            ) { p =>
-              val aIdx = i * srcStep / 4.to[I32] + p + srcAddr
-              val aEle = matrixA(aIdx)
-              val bIdx = p * weightStep / 4.to[I32] + j + weightAddr
-              val bEle = matrixB(bIdx)
-              aEle * bEle
-            }{_+_}.value
-
-            if (funcSim) {
-              // Just init 1 store for verifying functional correctness
-              cDRAM(baseAddr::lenC) store matrixC
-            }
+      Sequential.Foreach(nTimeSteps.to[I32] by 1.to[I32]) { _ =>
+        Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
+          def fusedDotProductWithNonLinear(w: SRAM2[lowT],
+                                           nonLinFunc: highT => highT,
+                                           b: SRAM1[lowT]): highT = {
+            val elem = Reduce(Reg[highT])(
+              (nHiddenUnits + nFeatures).to[I32] by rv.to[I32] par ru.to[I32]
+            ) { iu =>
+              Reduce(Reg[highT])(rv.to[I32] by 1.to[I32] par rv.to[I32]) { iv =>
+                val iuv = iu + iv
+                (w(ih, iuv) * xh(iuv)).to[highT]
+              } {
+                _ + _
+              }
+            } {
+              _ + _
+            }.value + b(ih)
+            nonLinFunc(elem)
           }
+
+          val i = fusedDotProductWithNonLinear(ijfoMems(0), activationI, biasesMems(0))
+          val j = fusedDotProductWithNonLinear(ijfoMems(1), activationJ, biasesMems(1))
+          val f = fusedDotProductWithNonLinear(ijfoMems(2), activationF, biasesMems(2))
+          val o = fusedDotProductWithNonLinear(ijfoMems(3), activationO, biasesMems(3))
+          val cNew = i * j + c(ih).to[highT] * f
+          c(ih) = cNew.to[lowT]
+          xh(ih + nFeatures.to[I32]) = (tanh(cNew) * o).to[lowT]
         }
-
-        cArgOut := matrixC(0.to[I32])
       }
+
+      cResultDRAM store c(0.to[I32] :: nHiddenUnits.to[I32])
+      xhResultDRAM store xh(0.to[I32] :: (nHiddenUnits + nFeatures).to[I32])
     }
 
-    val result = getArg(cArgOut)
-    if (funcSim) {
-      val resultC = getMem(cDRAM)
-      verifyArr(dataC, resultC, m, n, k, srcStep, weightStep, dstStep)
-    }
-    println(result)
+    val cResult = getMem(cResultDRAM)
+    val xhResult = getMem(xhResultDRAM)
+    printArray(cResult, "c = ")
+    printArray(xhResult, "[x, h] = ")
   }
 }
