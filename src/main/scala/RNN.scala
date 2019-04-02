@@ -8,11 +8,46 @@ object RNN extends SpatialApp {
     type highT = FixPt[TRUE, _16, _16]
 
     // TODO: how to set these non-linear functions?
-    val activationI: highT => highT = ???
-    val activationJ: highT => highT = ???
-    val activationF: highT => highT = ???
-    val activationO: highT => highT = ???
-    val tanh: highT => highT = ???
+    val tanh: highT => highT = x => {
+      // 0.0001616 + 0.86635 * x - 0.00042018 * x^2 - 0.13333 * x^3
+      val x2: highT = x * x
+      val x3: highT = x2 * x
+      val x1Term: highT = x * 0.86635.to[highT]
+      val x2Term: highT = (-0.00042018).to[highT] * x2
+      val x3Term: highT = (-0.13333).to[highT] * x3
+      val y: highT = 0.0001616.to[highT] + x1Term + x2Term + x3Term
+      y
+    }
+    val activation: highT => highT = x => {
+      // 5-piece activation function
+      val up = 2.5.to[highT]
+      val lo = -2.5.to[highT]
+      val posMid = 0.5.to[highT]
+      val negMid = -0.5.to[highT]
+      val bi = 0.375.to[highT]
+      val divIn = x / 4.to[highT]
+
+      val upMidLin = divIn - bi // (-2.5 ~ -0.5, x / 4 - 0.375)
+      val loMidLin = -divIn + bi // (0.5 ~ 2.5, x / 4 + 0.375)
+      val upLin = 1.to[highT]
+      val loLin = -1.to[highT]
+
+      val upCond = x > up
+      val upMidCond = (posMid < x) && (x <= up)
+      val loMidCond = (lo < x) && (x <= negMid)
+      val loCond = x <= lo
+      val y = mux(upCond,
+        upLin,
+        mux(upMidCond,
+          upMidLin,
+          mux(loMidCond, loMidLin, mux(loCond, loLin, x))))
+      y
+    }
+
+    val activationI: highT => highT = activation
+    val activationJ: highT => highT = tanh
+    val activationF: highT => highT = activation
+    val activationO: highT => highT = activation
 
     // TODO: what should be the parallelization and vectorization pars?
     val hu = 1
@@ -20,7 +55,7 @@ object RNN extends SpatialApp {
     val rv = 1
 
     // problem-specific params
-    val batchSize = 1
+    // val batchSize = 1
     val nHiddenUnits = 128
     val nFeatures = 128
     val nTimeSteps = 1
@@ -116,10 +151,18 @@ object RNN extends SpatialApp {
             nonLinFunc(elem)
           }
 
-          val i = fusedDotProductWithNonLinear(ijfoMems(0), activationI, biasesMems(0))
-          val j = fusedDotProductWithNonLinear(ijfoMems(1), activationJ, biasesMems(1))
-          val f = fusedDotProductWithNonLinear(ijfoMems(2), activationF, biasesMems(2))
-          val o = fusedDotProductWithNonLinear(ijfoMems(3), activationO, biasesMems(3))
+          val i = fusedDotProductWithNonLinear(ijfoMems(0),
+            activationI,
+            biasesMems(0))
+          val j = fusedDotProductWithNonLinear(ijfoMems(1),
+            activationJ,
+            biasesMems(1))
+          val f = fusedDotProductWithNonLinear(ijfoMems(2),
+            activationF,
+            biasesMems(2))
+          val o = fusedDotProductWithNonLinear(ijfoMems(3),
+            activationO,
+            biasesMems(3))
           val cNew = i * j + c(ih).to[highT] * f
           c(ih) = cNew.to[lowT]
           xh(ih + nFeatures.to[I32]) = (tanh(cNew) * o).to[lowT]
