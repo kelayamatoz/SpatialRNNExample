@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="345dfa57-ffc8-46d5-baec-6f03c74ad394" name="Default Changelist" comment="Working version of a simple w2v app. Still need to tune the precision and par factors." />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/project/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>debug: scala</find>
+      <find>debug: scala.Boolean</find>
+      <find>calcERrror</find>
+      <find>get</find>
+      <find>Epoch =</find>
+      <find>if (debug)</find>
+      <find>if (</find>
+      <find>if (debug</find>
+      <find>if</find>
+      <find>if (de</find>
+      <find>def softmax</find>
+      <find>def backprop</find>
+      <find>printV</find>
+      <find>printVec</find>
+      <find>iWord =</find>
+      <find>wcDRAM</find>
+      <find>xElE</find>
+      <find>exp</find>
+      <find>lnkkkk</find>
+      <find>exp_taylor</find>
+      <find>ln(</find>
+      <find>ln</find>
+      <find>ln_</find>
+      <find>log_taylor</find>
+      <find>print</find>
+      <find>val debug =</find>
+      <find>debug</find>
+      <find>cmdT</find>
+      <find>I32</find>
+      <find>matrix_c</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>windowRange</replace>
+      <replace>contextWindowRange</replace>
+      <replace>nCols</replace>
+      <replace>backProp</replace>
+      <replace>ln</replace>
+      <replace>I32</replace>
+      <replace>Int</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/scala/w2v.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/W2V.scala" />
+        <option value="$PROJECT_DIR$/../w2v_reference_design/word2vec_simple/word2vec_simple.py" />
+        <option value="$PROJECT_DIR$/../README.md" />
+        <option value="$PROJECT_DIR$/src/main/scala/W2VSimple.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/AntGEMM.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="834" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="word_embedding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RNN" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543929259387" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="word_embedding" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="word_embeddings [file:/Users/tianzhao/Developers/classes/CS217/cs217project/word_embeddings/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="word_embeddings-build [file:/Users/tianzhao/Developers/classes/CS217/cs217project/word_embeddings/]" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3108461068000" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="3063721572" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="2073824194" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../hw/GEMV-kelayamatoz" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../hw/lenet-kelayamatoz" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="345dfa57-ffc8-46d5-baec-6f03c74ad394" name="Default Changelist" comment="" />
+      <created>1542416519664</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542416519664</updated>
+      <workItem from="1542416524680" duration="6554000" />
+      <workItem from="1542773679860" duration="831000" />
+      <workItem from="1542774546640" duration="11898000" />
+      <workItem from="1542866757435" duration="15592000" />
+      <workItem from="1543243759530" duration="495000" />
+      <workItem from="1543373646792" duration="1144000" />
+      <workItem from="1543374895520" duration="26052000" />
+      <workItem from="1543824094709" duration="172000" />
+      <workItem from="1543836782874" duration="7303000" />
+      <workItem from="1543929952420" duration="23000" />
+      <workItem from="1543993420706" duration="437000" />
+      <workItem from="1544015973025" duration="19000" />
+      <workItem from="1554230609594" duration="63000" />
+    </task>
+    <task id="LOCAL-00001" summary="&#10;First commit">
+      <created>1542416652259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542416652259</updated>
+    </task>
+    <task id="LOCAL-00002" summary="More to get done tmr...">
+      <created>1542441795977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542441795977</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Working on backprop for w2v">
+      <created>1542811434158</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542811434158</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Using a case class to wrap things...easier to test">
+      <created>1542868237217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542868237217</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Done with the numpy to spatial translation. Need to verify the simulation results">
+      <created>1543209720305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543209720305</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Forward pass verified">
+      <created>1543552142505</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543552142505</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Error calc verified">
+      <created>1543557855554</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1543557855554</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Loss verified">
+      <created>1543561659716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543561659716</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1 word in 1 epoch works correctly, working on checking the full epoch">
+      <created>1543562647425</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543562647425</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Last version where all the debugs within backprop-ing over a single word exists.">
+      <created>1543562703058</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543562703058</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix the issue with softmax; now things are accurate up to iWord = 4...">
+      <created>1543584246970</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543584246970</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Functional sim in scala passed">
+      <created>1543587403764</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543587403764</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Working on compressed data format. Adding all the necessary csv files">
+      <created>1543588214068</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543588214068</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Compressed wc and wt successfully.">
+      <created>1543589902414</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543589902414</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Working version of a simple w2v app. Still need to tune the precision and par factors.">
+      <created>1543593312875</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543593312875</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="70583000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="834" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.27272728" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="0" weight="0.32935324" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="10" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32636815" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Key Promoter X" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="sbt" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="9" />
+      <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="11" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.26904178" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="0" weight="0.32935324" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="10" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3272727" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="sbt" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="9" />
+      <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="11" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="First commit" />
+    <MESSAGE value="&#10;First commit" />
+    <MESSAGE value="Update test data" />
+    <MESSAGE value="Updated w1, w2, wt, wc generation rules" />
+    <MESSAGE value="More to get done tmr..." />
+    <MESSAGE value="Working on DP for forward" />
+    <MESSAGE value="Working on backprop for w2v" />
+    <MESSAGE value="Using a case class to wrap things...easier to test" />
+    <MESSAGE value="Done with the translation. Need to verify the simulation results" />
+    <MESSAGE value="Done with the numpy to spatial translation. Need to verify the simulation results" />
+    <MESSAGE value="Forward pass verified" />
+    <MESSAGE value="Error calc verified" />
+    <MESSAGE value="Loss verified" />
+    <MESSAGE value="1 word in 1 epoch works correctly, working on checking the full epoch" />
+    <MESSAGE value="Last version where all the debugs within backprop-ing over a single word exists." />
+    <MESSAGE value="Fix the issue with softmax; now things are accurate up to iWord = 4..." />
+    <MESSAGE value="Functional sim in scala passed" />
+    <MESSAGE value="Working on compressed data format. Adding all the necessary csv files" />
+    <MESSAGE value="Compressed wc and wt successfully." />
+    <MESSAGE value="Working version of a simple w2v app. Still need to tune the precision and par factors." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working version of a simple w2v app. Still need to tune the precision and par factors." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/W2V.scala" />
+    <entry file="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/spatial_2.12/srcs/spatial_2.12-1.0-SNAPSHOT-sources.jar!/spatial/lang/types/Mem.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/spatial_2.12/srcs/spatial_2.12-1.0-SNAPSHOT-sources.jar!/spatial/lang/Aliases.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/spatial_2.12/srcs/spatial_2.12-1.0-SNAPSHOT-sources.jar!/spatial/lang/SRAM.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="118" column="34" lean-forward="true" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/argon_2.12/srcs/argon_2.12-1.0-SNAPSHOT-sources.jar!/argon/lang/api/DebuggingAPI.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/local/edu.stanford.cs.dawn/spatial_2.12/1.0-SNAPSHOT/jars/spatial_2.12.jar!/spatial/lang/host/CSVFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../w2v_reference_design/word2vec_simple/word2vec_simple.py" />
+    <entry file="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/argon_2.12/srcs/argon_2.12-1.0-SNAPSHOT-sources.jar!/argon/lang/types/Num.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/spatial_2.12/srcs/spatial_2.12-1.0-SNAPSHOT-sources.jar!/spatial/lang/api/MathAPI.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../README.md" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/W2VSimple.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/AntGEMM.scala" />
+    <entry file="jar://$USER_HOME$/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.2/main_2.12-1.1.2.jar!/sbt/Keys.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="178" column="6" selection-start-line="178" selection-start-column="6" selection-end-line="178" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>word_embedding</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>sbt: edu.stanford.cs.dawn:argon_2.12:1.0-SNAPSHOT:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="sbt: edu.stanford.cs.dawn:argon_2.12:1.0-SNAPSHOT:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/argon_2.12/jars/argon_2.12-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/local/edu.stanford.cs.dawn/argon_2.12/1.0-SNAPSHOT/jars/argon_2.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.cs.dawn/argon_2.12/srcs/argon_2.12-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

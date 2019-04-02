@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0mjava.lang.RuntimeException: Nonzero exit code: 1[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeTrapExit(Run.scala:124)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.run(Run.scala:77)[0m
