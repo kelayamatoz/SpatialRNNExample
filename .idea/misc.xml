@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SVCompilerDirectivesDefines">
+    <option name="argumentDefaultText">
+      <map>
+        <entry key="RANDOM">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="argumentNames">
+      <map>
+        <entry key="RANDOM">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="body">
+      <map>
+        <entry key="RANDOM" value="$random" />
+      </map>
+    </option>
+    <option name="dependencies">
+      <map>
+        <entry key="CLOCK_PERIOD">
+          <value>
+            <set>
+              <option value="Top-harness.sv" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RANDOM">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="RANDOMIZE">
+          <value>
+            <set>
+              <option value="Top.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RANDOMIZE_GARBAGE_ASSIGN">
+          <value>
+            <set>
+              <option value="Top.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RANDOMIZE_INVALID_ASSIGN">
+          <value>
+            <set>
+              <option value="Top.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RANDOMIZE_MEM_INIT">
+          <value>
+            <set>
+              <option value="Top.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RANDOMIZE_REG_INIT">
+          <value>
+            <set>
+              <option value="Top.v" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="offset">
+      <map>
+        <entry key="RANDOM" value="1036" />
+      </map>
+    </option>
+    <option name="source">
+      <map>
+        <entry key="RANDOM" value="Top.v" />
+      </map>
+    </option>
   </component>
 </project>

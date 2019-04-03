@@ -28,7 +28,7 @@ object RNN extends SpatialApp {
       val divIn = x / 4.to[highT]
 
       val upMidLin = divIn - bi // (-2.5 ~ -0.5, x / 4 - 0.375)
-      val loMidLin = -divIn + bi // (0.5 ~ 2.5, x / 4 + 0.375)
+      val loMidLin = - divIn + bi // (0.5 ~ 2.5, x / 4 + 0.375)
       val upLin = 1.to[highT]
       val loLin = -1.to[highT]
 
@@ -136,7 +136,7 @@ object RNN extends SpatialApp {
           def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                            nonLinFunc: highT => highT,
                                            b: SRAM1[lowT]): highT = {
-            val elem = Reduce(Reg[highT])(
+            val elem: highT = Reduce(Reg[highT])(
               (nHiddenUnits + nFeatures).to[I32] by rv.to[I32] par ru.to[I32]
             ) { iu =>
               Reduce(Reg[highT])(rv.to[I32] by 1.to[I32] par rv.to[I32]) { iv =>
@@ -147,8 +147,9 @@ object RNN extends SpatialApp {
               }
             } {
               _ + _
-            }.value + b(ih)
-            nonLinFunc(elem)
+            }.value + b(ih).to[highT]
+            val re: highT = nonLinFunc(elem)
+            re
           }
 
           val i = fusedDotProductWithNonLinear(ijfoMems(0),
