@@ -164,7 +164,10 @@ object RNN extends SpatialApp {
             re
           }
 
-          val ijfoRegs: scala.Array[Reg[highT]] = scala.Array.tabulate(nGates) { _ => Reg[highT] }
+          val ijfoRegs: scala.Array[Reg[highT]] = scala.Array.tabulate(nGates) {
+            _ =>
+              Reg[highT]
+          }
 
           Parallel {
             ijfoRegs(0) := fusedDotProductWithNonLinear(ijfoMems(0),
