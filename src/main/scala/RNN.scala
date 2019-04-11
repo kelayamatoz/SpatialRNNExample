@@ -141,9 +141,9 @@ object RNN extends SpatialApp {
       c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
 
       Sequential.Foreach(nTimeSteps.to[I32] by 1.to[I32]) { _ =>
-        // TODO: the two-level loop splitting is a CGRA specific optimization.
-        // TODO: A CGRA has dedicated SIMD support for the inner most loop.
-        // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed...
+        // TODO: This tiling is a CGRA specific optimization.
+        // TODO: A CGRA has dedicated SIMD units for the inner most loop, and hence tiling the inner loop makes sense.
+        // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed.
         Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
           def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                            nonLinFunc: highT => highT,
