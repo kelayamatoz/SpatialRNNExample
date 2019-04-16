@@ -1,7 +1,8 @@
 import spatial.dsl._
 
 @spatial
-object RNN extends SpatialApp {
+object RNNMetaProgrammed extends SpatialApp {
+  // This should take 5180 cycles to run...
   def main(args: Array[String]): Unit = {
     // This is describing the LSTM dataflow
     type lowT = FixPt[TRUE, _4, _4]
@@ -10,47 +11,39 @@ object RNN extends SpatialApp {
     // TODO: how to set these non-linear functions?
     val tanh: highT => highT = x => {
       // 0.0001616 + 0.86635 * x - 0.00042018 * x^2 - 0.13333 * x^3
-      val yReg: Reg[highT] = Reg[highT](0.to[highT])
-      Pipe {
-        val x2: highT = x * x
-        val x3: highT = x2 * x
-        val x1Term: highT = x * 0.86635.to[highT]
-        val x2Term: highT = (-0.00042018).to[highT] * x2
-        val x3Term: highT = (-0.13333).to[highT] * x3
-        val y: highT = 0.0001616.to[highT] + x1Term + x2Term + x3Term
-        yReg := y
-      }
-      yReg.value
+      val x2: highT = x * x
+      val x3: highT = x2 * x
+      val x1Term: highT = x * 0.86635.to[highT]
+      val x2Term: highT = (-0.00042018).to[highT] * x2
+      val x3Term: highT = (-0.13333).to[highT] * x3
+      val y: highT = 0.0001616.to[highT] + x1Term + x2Term + x3Term
+      y
     }
 
     val activation: highT => highT = x => {
       // 5-piece activation function
-      val yReg: Reg[highT] = Reg[highT](0.to[highT])
-      Pipe {
-        val up = 2.5.to[highT]
-        val lo = -2.5.to[highT]
-        val posMid = 0.5.to[highT]
-        val negMid = -0.5.to[highT]
-        val bi = 0.375.to[highT]
-        val divIn = x / 4.to[highT]
+      val up = 2.5.to[highT]
+      val lo = -2.5.to[highT]
+      val posMid = 0.5.to[highT]
+      val negMid = -0.5.to[highT]
+      val bi = 0.375.to[highT]
+      val divIn = x / 4.to[highT]
 
-        val upMidLin = divIn - bi // (-2.5 ~ -0.5, x / 4 - 0.375)
-        val loMidLin = -divIn + bi // (0.5 ~ 2.5, x / 4 + 0.375)
-        val upLin = 1.to[highT]
-        val loLin = -1.to[highT]
+      val upMidLin = divIn - bi // (-2.5 ~ -0.5, x / 4 - 0.375)
+      val loMidLin = -divIn + bi // (0.5 ~ 2.5, x / 4 + 0.375)
+      val upLin = 1.to[highT]
+      val loLin = -1.to[highT]
 
-        val upCond = x > up
-        val upMidCond = (posMid < x) && (x <= up)
-        val loMidCond = (lo < x) && (x <= negMid)
-        val loCond = x <= lo
-        val y = mux(upCond,
-          upLin,
-          mux(upMidCond,
-            upMidLin,
-            mux(loMidCond, loMidLin, mux(loCond, loLin, x))))
-        yReg := y
-      }
-      yReg.value
+      val upCond = x > up
+      val upMidCond = (posMid < x) && (x <= up)
+      val loMidCond = (lo < x) && (x <= negMid)
+      val loCond = x <= lo
+      val y = mux(upCond,
+        upLin,
+        mux(upMidCond,
+          upMidLin,
+          mux(loMidCond, loMidLin, mux(loCond, loLin, x))))
+      y
     }
 
     val activationI: highT => highT = activation
@@ -146,63 +139,39 @@ object RNN extends SpatialApp {
         // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed, which means that we don't gain much from
         // loop splitting.
 
-        Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
+        Foreach(
+          nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32],
+          (nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32]
+        ) { (ih, iuvTile) =>
           def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                            nonLinFunc: highT => highT,
                                            b: SRAM1[lowT]): highT = {
-
-            val elem: highT = Reduce (Reg[highT]) ((nHiddenUnits + nFeatures).to[I32] by 1.to[I32] par (ru * rv).to[I32]) { iuv =>
-              (w(ih, iuv) * xh(iuv)).to[highT]
-            } {_+_}.value + b(ih).to[highT]
-
-            // val elem: highT = List.tabulate(ru * rv) { ii =>
-            //   val iuv = iuvTile + ii.to[I32]
-            //   val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
-            //   re
-            // }.sumTree
+            val elem: highT = List.tabulate(ru * rv) { ii =>
+              val iuv = iuvTile + ii.to[I32]
+              val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
+              re
+            }.sumTree + b(ih).to[highT]
 
             val re: highT = nonLinFunc(elem)
             re
           }
 
-          val ijfoRegs: scala.Array[Reg[highT]] = scala.Array.tabulate(nGates) {
-            _ =>
-              Reg[highT]
-          }
+          val i = fusedDotProductWithNonLinear(ijfoMems(0),
+            activationI,
+            biasesMems(0))
+          val j = fusedDotProductWithNonLinear(ijfoMems(1),
+            activationJ,
+            biasesMems(1))
+          val f = fusedDotProductWithNonLinear(ijfoMems(2),
+            activationF,
+            biasesMems(2))
+          val o = fusedDotProductWithNonLinear(ijfoMems(3),
+            activationO,
+            biasesMems(3))
 
-          Parallel {
-            Pipe {
-              ijfoRegs(0) := fusedDotProductWithNonLinear(ijfoMems(0),
-                activationI,
-                biasesMems(0))
-            }
-            Pipe {
-              ijfoRegs(1) := fusedDotProductWithNonLinear(ijfoMems(1),
-                activationJ,
-                biasesMems(1))
-            }
-            Pipe {
-              ijfoRegs(2) := fusedDotProductWithNonLinear(ijfoMems(2),
-                activationF,
-                biasesMems(2))
-            }
-            Pipe {
-              ijfoRegs(3) := fusedDotProductWithNonLinear(ijfoMems(3),
-                activationO,
-                biasesMems(3))
-            }
-          }
-
-          val i = ijfoRegs(0).value
-          val j = ijfoRegs(1).value
-          val f = ijfoRegs(2).value
-          val o = ijfoRegs(3).value
-
-          Pipe {
-            val cNew = i * j + c(ih).to[highT] * f
-            c(ih) = cNew.to[lowT]
-            hNew(ih) = (tanh(cNew) * o).to[lowT]
-          }
+          val cNew = i * j + c(ih).to[highT] * f
+          c(ih) = cNew.to[lowT]
+          hNew(ih) = (tanh(cNew) * o).to[lowT]
         }
       }
 

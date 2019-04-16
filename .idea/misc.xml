@@ -6,29 +6,2345 @@
   <component name="SVCompilerDirectivesDefines">
     <option name="argumentDefaultText">
       <map>
-        <entry key="RANDOM">
+        <entry key="ALTERA_ALT_MEM_IF_PHY_FAST_SIM_MODEL">
           <value>
             <list />
+          </value>
+        </entry>
+        <entry key="CL_DRAM_DMA_DEFINES">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="CL_NAME">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="DISABLE_VJTAG_DEBUG">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="FPGA_LESS_RST">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="SH_CL_ASYNC">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="SH_SDA">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_abphy_get_lane">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_abphy_get_pin_index">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_abphy_get_tile">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_in">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_in_with_regs">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_out">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_out_with_regs">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_afi">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_data">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_datamask">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_oe">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ac_hmc">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ac_tile_index">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_broadcast_chain_index">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_center_tid">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_chain_index_for_lane">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_chain_index_for_tile">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_rd_data_rdy">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_rd_data_rdy_of_hmc">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_data_vld">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_data_vld_of_hmc">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_ecc_info">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_ecc_info_of_hmc">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_cpa_0_clk_ratio">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_cpa_1_clk_ratio">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_en">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_1">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_2">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_3">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_4">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_5">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_6">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_7">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_8">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_x4_or_x8_or_x9">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_curr_distance_from_ac_tile">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_data_alignment_mode">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth_pri">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth_sec">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline_pri">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline_sec">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_dbc0_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc_pipe_lat">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_dbi_rd_en">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_dbi_wr_en">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ddr4_search">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dll_ctl_static">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dll_ctlsel">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dqs_b_en">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dqs_lgc_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dqsin">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_ctrl_mem_type">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel_non_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel_pp">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_or_core">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_tid">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_lane">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_lane_mode_rate_in">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_lane_mode_rate_out">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_lane_tid">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_lane_usage">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_max">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_max_distance_from_ac_tile">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_max_distance_from_ac_tile_capped">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_min">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent_0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent_1">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_feedback_divider_c0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_feedback_divider_p0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_track_speed">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_ac_hmc_data_override_ena">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_count">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_data_in_mode_raw">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_data_in_mode_str">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_db_in_bypass">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_db_oe_bypass">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_db_out_bypass">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_ddr_raw">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_ddr_str">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_1">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_10">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_11">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_2">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_3">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_4">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_5">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_6">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_7">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_8">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_9">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_gpio_or_ddr">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_index">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_invert_oe">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_invert_wr">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_oct_mode_raw">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_oct_mode_str">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_usage">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_wdb_raw">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_wdb_str">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_preamble_track_dqs_enable_mode">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pst_en_shrink">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pst_preamble_mode">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_tile">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_l2core_afi">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_l2core_data">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_sel_hmc_def">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_sel_hmc_lane">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_sel_hmc_val">
+          <value>
+            <list>
+              <option value="" />
+              <option value="" />
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_unused_core2l_afi">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_unused_core2l_data">
+          <value>
+            <list>
+              <option value="" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_unused_core2l_oe">
+          <value>
+            <list>
+              <option value="" />
+            </list>
           </value>
         </entry>
       </map>
     </option>
     <option name="argumentNames">
       <map>
-        <entry key="RANDOM">
+        <entry key="ALTERA_ALT_MEM_IF_PHY_FAST_SIM_MODEL">
           <value>
             <list />
+          </value>
+        </entry>
+        <entry key="CL_DRAM_DMA_DEFINES">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="CL_NAME">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="DISABLE_VJTAG_DEBUG">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="FPGA_LESS_RST">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="SH_CL_ASYNC">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="SH_SDA">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_abphy_get_lane">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_abphy_get_pin_index">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_abphy_get_tile">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_in">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_mem_port_width" />
+              <option value="_afi_port_width" />
+              <option value="_afi_port" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_in_with_regs">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_mem_port_width" />
+              <option value="_afi_port_width" />
+              <option value="_afi_port" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_out">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_mem_port_width" />
+              <option value="_afi_port_width" />
+              <option value="_afi_port" />
+              <option value="_afi_oe_port_width" />
+              <option value="_afi_oe_port" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_connect_out_with_regs">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_mem_port_width" />
+              <option value="_afi_port_width" />
+              <option value="_afi_port" />
+              <option value="_afi_oe_port_width" />
+              <option value="_afi_oe_port" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_afi">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+              <option value="_phase_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_data">
+          <value>
+            <list>
+              <option value="_port_i" />
+              <option value="_phase_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_datamask">
+          <value>
+            <list>
+              <option value="_port_i" />
+              <option value="_phase_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_core2l_oe">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+              <option value="_phase_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ac_hmc">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ac_tile_index">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_broadcast_chain_index">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_center_tid">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_chain_index_for_lane">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_chain_index_for_tile">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_rd_data_rdy">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_rd_data_rdy_of_hmc">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_data_vld">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_data_vld_of_hmc">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_ecc_info">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_ecc_info_of_hmc">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_cpa_0_clk_ratio">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_cpa_1_clk_ratio">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_en">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_1">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_2">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_3">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_4">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_5">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_6">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_7">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_8">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_crc_x4_or_x8_or_x9">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_curr_distance_from_ac_tile">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_data_alignment_mode">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth_pri">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth_sec">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline_pri">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline_sec">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_dbc0_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dbc_pipe_lat">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_dbi_rd_en">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_dbi_wr_en">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_ddr4_search">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dll_ctl_static">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dll_ctlsel">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dqs_b_en">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dqs_lgc_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_dqsin">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_burst_length">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_cmd_rate">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_ctrl_mem_type">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel_non_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel_pp">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_hmc_or_core">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_protocol">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_hmc_tid">
+          <value>
+            <list>
+              <option value="_tile_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_lane">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_lane_mode_rate_in">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_lane_mode_rate_out">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_lane_tid">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_lane_usage">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_max">
+          <value>
+            <list>
+              <option value="_i" />
+              <option value="_j" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_max_distance_from_ac_tile">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_max_distance_from_ac_tile_capped">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_min">
+          <value>
+            <list>
+              <option value="_i" />
+              <option value="_j" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent">
+          <value>
+            <list>
+              <option value="_clk_ratio" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent_0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent_1">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_feedback_divider_c0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_feedback_divider_p0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pa_track_speed">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_ac_hmc_data_override_ena">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_count">
+          <value>
+            <list>
+              <option value="_loc" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_data_in_mode_raw">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_data_in_mode_str">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_db_in_bypass">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_db_oe_bypass">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_db_out_bypass">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_ddr_raw">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_ddr_str">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_0">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_1">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_10">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_11">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_2">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_3">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_4">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_5">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_6">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_7">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_8">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_9">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pin_gpio_or_ddr">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_index">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_invert_oe">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_invert_wr">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_oct_mode_raw">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_oct_mode_str">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_usage">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_wdb_raw">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_pin_wdb_str">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_get_preamble_track_dqs_enable_mode">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pst_en_shrink">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_pst_preamble_mode">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="_get_tile">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_l2core_afi">
+          <value>
+            <list>
+              <option value="_loc" />
+              <option value="_port_i" />
+              <option value="_phase_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_l2core_data">
+          <value>
+            <list>
+              <option value="_port_i" />
+              <option value="_phase_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_sel_hmc_def">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_pri" />
+              <option value="_sec" />
+              <option value="_def" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_sel_hmc_lane">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_lane_i" />
+              <option value="_pri" />
+              <option value="_sec" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_sel_hmc_val">
+          <value>
+            <list>
+              <option value="_tile_i" />
+              <option value="_pri" />
+              <option value="_sec" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_unused_core2l_afi">
+          <value>
+            <list>
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_unused_core2l_data">
+          <value>
+            <list>
+              <option value="_pin_i" />
+            </list>
+          </value>
+        </entry>
+        <entry key="_unused_core2l_oe">
+          <value>
+            <list>
+              <option value="_pin_i" />
+            </list>
           </value>
         </entry>
       </map>
     </option>
     <option name="body">
       <map>
-        <entry key="RANDOM" value="$random" />
+        <entry key="ALTERA_ALT_MEM_IF_PHY_FAST_SIM_MODEL" value="0" />
+        <entry key="CL_DRAM_DMA_DEFINES" value="empty define" />
+        <entry key="CL_NAME" value="cl_dram_dma" />
+        <entry key="DISABLE_VJTAG_DEBUG" value="empty define" />
+        <entry key="FPGA_LESS_RST" value="empty define" />
+        <entry key="SH_CL_ASYNC" value="empty define" />
+        <entry key="SH_SDA" value="empty define" />
+        <entry key="_abphy_get_lane" value="( (`_abphy_get_pin_index(_loc, _port_i) / PINS_PER_LANE) % LANES_PER_TILE )" />
+        <entry key="_abphy_get_pin_index" value="( _loc[ (_port_i + 1) * 10 +: 10 ] )" />
+        <entry key="_abphy_get_tile" value="(  `_abphy_get_pin_index(_loc, _port_i) / (PINS_PER_LANE * LANES_PER_TILE) )" />
+        <entry key="_connect_in" value="for (port_i = 0; port_i &lt; _mem_port_width; ++port_i) begin : iport &#10;      for (phase_i = 0; phase_i &lt; _afi_port_width / _mem_port_width; ++phase_i) begin : data_phase &#10;         assign _afi_port[_mem_port_width * phase_i + port_i] = `_l2core_afi(_loc, port_i, phase_i); &#10;      end &#10;   end" />
+        <entry key="_connect_in_with_regs" value="logic [_afi_port_width-1:0] sr_i; &#10;   `_connect_in(_loc, _mem_port_width, _afi_port_width, sr_i) &#10;   altera_emif_arch_nf_regs # ( &#10;      .REGISTER     (REGISTER_AFI), &#10;      .WIDTH        (_afi_port_width) &#10;   ) afi_regs_i ( &#10;      .clk      (afi_clk), &#10;      .reset_n  (1'b1), &#10;      .data_in  (sr_i), &#10;      .data_out (_afi_port) &#10;   );" />
+        <entry key="_connect_out" value="for (port_i = 0; port_i &lt; _mem_port_width; ++port_i) begin : oport &#10;      for (phase_i = 0; phase_i &lt; 8; ++phase_i) begin : data_phase &#10;         if (phase_i &lt; _afi_port_width / _mem_port_width) begin &#10;            assign `_core2l_afi(_loc, port_i, phase_i) = _afi_port[_mem_port_width * phase_i + port_i]; &#10;         end else begin &#10;            assign `_core2l_afi(_loc, port_i, phase_i) = 1'b0; &#10;         end &#10;      end &#10;      for (phase_i = 0; phase_i &lt; 4; ++phase_i) begin : oe_phase &#10;         if (phase_i &lt; SDR_RATIO) begin &#10;            assign `_core2l_oe(_loc, port_i, phase_i) = _afi_oe_port[(port_i / (_mem_port_width / (_afi_oe_port_width / SDR_RATIO))) * SDR_RATIO + phase_i]; &#10;         end else begin &#10;            assign `_core2l_oe(_loc, port_i, phase_i) = 1'b0; &#10;         end &#10;      end &#10;   end" />
+        <entry key="_connect_out_with_regs" value="logic [_afi_port_width-1:0] sr_o; &#10;   altera_emif_arch_nf_regs # ( &#10;      .REGISTER     (REGISTER_AFI), &#10;      .WIDTH        (_afi_port_width) &#10;   ) afi_regs_o ( &#10;      .clk      (afi_clk), &#10;      .reset_n  (1'b1), &#10;      .data_in  (_afi_port), &#10;      .data_out (sr_o) &#10;   ); &#10;   `_connect_out(_loc, _mem_port_width, _afi_port_width, sr_o, _afi_oe_port_width, _afi_oe_port)" />
+        <entry key="_core2l_afi" value="core2l_data&#10;   [`_get_tile(_loc, _port_i)]&#10;   [`_get_lane(_loc, _port_i)]&#10;   [(`_get_pin(_loc, _port_i) * 8) + _phase_i]" />
+        <entry key="_core2l_data" value="core2l_data&#10;   [`_get_tile(WD_PINLOC, _port_i)]&#10;   [`_get_lane(WD_PINLOC, _port_i)]&#10;   [(`_get_pin(WD_PINLOC, _port_i) * 8) + _phase_i]" />
+        <entry key="_core2l_datamask" value="core2l_data&#10;   [`_get_tile(WM_PINLOC, _port_i)]&#10;   [`_get_lane(WM_PINLOC, _port_i)]&#10;   [(`_get_pin(WM_PINLOC, _port_i) * 8) + _phase_i]" />
+        <entry key="_core2l_oe" value="core2l_oe&#10;   [`_get_tile(_loc, _port_i)]&#10;   [`_get_lane(_loc, _port_i)]&#10;   [(`_get_pin(_loc, _port_i) * 4) + _phase_i]" />
+        <entry key="_get_ac_hmc" value="( (`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_AC_HMC || &#10;                                                            `_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_AC_CORE || &#10;                                                            (`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_UNUSED &amp;&amp; IS_HPS &amp;&amp; _tile_i == PRI_AC_TILE_INDEX)) ? &#10;                                                            t2l_ac_hmc[lane_i] : 96'b0 )" />
+        <entry key="_get_ac_tile_index" value="( (PHY_PING_PONG_EN &amp;&amp; (_tile_i &lt; SEC_AC_TILE_INDEX || (_tile_i == SEC_AC_TILE_INDEX &amp;&amp; _lane_i &lt; 2))) ? SEC_AC_TILE_INDEX : PRI_AC_TILE_INDEX )" />
+        <entry key="_get_broadcast_chain_index" value="( _tile_i * LANES_PER_TILE + _lane_i )" />
+        <entry key="_get_center_tid" value="( CENTER_TIDS[_tile_i * 9 +: 9] )" />
+        <entry key="_get_chain_index_for_lane" value="( (_lane_i &lt; 2) ? (_tile_i * (LANES_PER_TILE + 1) + _lane_i) : ( &#10;                                                                           (_tile_i * (LANES_PER_TILE + 1) + _lane_i + 1 )) )" />
+        <entry key="_get_chain_index_for_tile" value="( _tile_i * (LANES_PER_TILE + 1) + 2 )" />
+        <entry key="_get_core2dbc_rd_data_rdy" value="( ((`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_WRDATA) || &#10;                                                                 (_lane_i == 0 &amp;&amp; `_get_lane_usage(_tile_i, 0) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc0_to_local&quot;) || &#10;                                                                 (_lane_i == 1 &amp;&amp; `_get_lane_usage(_tile_i, 1) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc1_to_local&quot;) || &#10;                                                                 (_lane_i == 2 &amp;&amp; `_get_lane_usage(_tile_i, 2) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc2_to_local&quot;) || &#10;                                                                 (_lane_i == 3 &amp;&amp; `_get_lane_usage(_tile_i, 3) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc3_to_local&quot;)) ? &#10;                                                                  `_get_core2dbc_rd_data_rdy_of_hmc(_tile_i, _lane_i) : 1'b1 )" />
+        <entry key="_get_core2dbc_rd_data_rdy_of_hmc" value="( (`_get_ac_tile_index(_tile_i, _lane_i) == PRI_AC_TILE_INDEX ? core2l_rd_data_rdy_ast_0 : core2l_rd_data_rdy_ast_1 ) )" />
+        <entry key="_get_core2dbc_wr_data_vld" value="( ((`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_WRDATA) || &#10;                                                                 (_lane_i == 0 &amp;&amp; `_get_lane_usage(_tile_i, 0) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc0_to_local&quot;) || &#10;                                                                 (_lane_i == 1 &amp;&amp; `_get_lane_usage(_tile_i, 1) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc1_to_local&quot;) || &#10;                                                                 (_lane_i == 2 &amp;&amp; `_get_lane_usage(_tile_i, 2) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc2_to_local&quot;) || &#10;                                                                 (_lane_i == 3 &amp;&amp; `_get_lane_usage(_tile_i, 3) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc3_to_local&quot;)) ? &#10;                                                                  `_get_core2dbc_wr_data_vld_of_hmc(_tile_i, _lane_i) : 1'b0 )" />
+        <entry key="_get_core2dbc_wr_data_vld_of_hmc" value="( (`_get_ac_tile_index(_tile_i, _lane_i) == PRI_AC_TILE_INDEX ? core2l_wr_data_vld_ast_0 : core2l_wr_data_vld_ast_1 ) )" />
+        <entry key="_get_core2dbc_wr_ecc_info" value="( ((`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_WRDATA) || &#10;                                                                 (_lane_i == 0 &amp;&amp; `_get_lane_usage(_tile_i, 0) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc0_to_local&quot;) || &#10;                                                                 (_lane_i == 1 &amp;&amp; `_get_lane_usage(_tile_i, 1) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc1_to_local&quot;) || &#10;                                                                 (_lane_i == 2 &amp;&amp; `_get_lane_usage(_tile_i, 2) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc2_to_local&quot;) || &#10;                                                                 (_lane_i == 3 &amp;&amp; `_get_lane_usage(_tile_i, 3) == LANE_USAGE_AC_HMC &amp;&amp; `_get_hmc_dbc2ctrl_sel(_tile_i) == &quot;dbc3_to_local&quot;)) ? &#10;                                                                  `_get_core2dbc_wr_ecc_info_of_hmc(_tile_i, _lane_i) : 13'b0 )" />
+        <entry key="_get_core2dbc_wr_ecc_info_of_hmc" value="( (`_get_ac_tile_index(_tile_i, _lane_i) == PRI_AC_TILE_INDEX ? core2l_wr_ecc_info_0 : core2l_wr_ecc_info_1 ) )" />
+        <entry key="_get_cpa_0_clk_ratio" value="( NUM_OF_HMC_PORTS &gt; 0 ? USER_CLK_RATIO : (USER_CLK_RATIO * 2) )" />
+        <entry key="_get_cpa_1_clk_ratio" value="( C2P_P2C_CLK_RATIO )" />
+        <entry key="_get_crc_en" value="((`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_WRDATA) ? CRC_EN : &quot;crc_disable&quot;)" />
+        <entry key="_get_crc_pin_pos_0" value="1" />
+        <entry key="_get_crc_pin_pos_1" value="2" />
+        <entry key="_get_crc_pin_pos_2" value="3" />
+        <entry key="_get_crc_pin_pos_3" value="6" />
+        <entry key="_get_crc_pin_pos_4" value="((`_get_crc_x4_or_x8_or_x9 != &quot;x4_mode&quot;) ? 7 : 4)" />
+        <entry key="_get_crc_pin_pos_5" value="((`_get_crc_x4_or_x8_or_x9 != &quot;x4_mode&quot;) ? 8 : 4)" />
+        <entry key="_get_crc_pin_pos_6" value="((`_get_crc_x4_or_x8_or_x9 != &quot;x4_mode&quot;) ? 9 : 4)" />
+        <entry key="_get_crc_pin_pos_7" value="((`_get_crc_x4_or_x8_or_x9 != &quot;x4_mode&quot;) ? 10 : 4)" />
+        <entry key="_get_crc_pin_pos_8" value="((`_get_crc_x4_or_x8_or_x9 == &quot;x9_mode&quot;) ? 11 : 4)" />
+        <entry key="_get_crc_x4_or_x8_or_x9" value="( (PORT_MEM_DQ_WIDTH / PORT_MEM_DQS_WIDTH == 4) ? &quot;x4_mode&quot; : ( &#10;                                                           (DBI_WR_ENABLE == &quot;true&quot; || MEM_DATA_MASK_EN) ? &quot;x9_mode&quot; : ( &#10;                                                                                                           &quot;x8_mode&quot;   )) )" />
+        <entry key="_get_ctrl2dbc_sel_0" value="( PHY_PING_PONG_EN ? `_get_ctrl2dbc_sel_0_pp(_tile_i)    : `_get_ctrl2dbc_sel_0_non_pp(_tile_i) )" />
+        <entry key="_get_ctrl2dbc_sel_0_non_pp" value="( (_tile_i &lt;= PRI_AC_TILE_INDEX) ? &quot;upper_mux_dbc0&quot; : &quot;lower_mux_dbc0&quot; )" />
+        <entry key="_get_ctrl2dbc_sel_0_pp" value="( (_tile_i &gt;= PRI_AC_TILE_INDEX) ? &quot;lower_mux_dbc0&quot; : ((_tile_i &lt; SEC_AC_TILE_INDEX) ? &quot;upper_mux_dbc0&quot; : (`_get_ac_tile_index(_tile_i, 0) == PRI_AC_TILE_INDEX ? &quot;lower_mux_dbc0&quot; : &quot;upper_mux_dbc0&quot;)) )" />
+        <entry key="_get_ctrl2dbc_sel_1" value="( PHY_PING_PONG_EN ? `_get_ctrl2dbc_sel_1_pp(_tile_i)    : `_get_ctrl2dbc_sel_1_non_pp(_tile_i) )" />
+        <entry key="_get_ctrl2dbc_sel_1_non_pp" value="( (_tile_i &lt;= PRI_AC_TILE_INDEX) ? &quot;upper_mux_dbc1&quot; : &quot;lower_mux_dbc1&quot; )" />
+        <entry key="_get_ctrl2dbc_sel_1_pp" value="( (_tile_i &gt;= PRI_AC_TILE_INDEX) ? &quot;lower_mux_dbc1&quot; : ((_tile_i &lt; SEC_AC_TILE_INDEX) ? &quot;upper_mux_dbc1&quot; : (`_get_ac_tile_index(_tile_i, 1) == PRI_AC_TILE_INDEX ? &quot;lower_mux_dbc1&quot; : &quot;upper_mux_dbc1&quot;)) )" />
+        <entry key="_get_ctrl2dbc_sel_2" value="( PHY_PING_PONG_EN ? `_get_ctrl2dbc_sel_2_pp(_tile_i)    : `_get_ctrl2dbc_sel_2_non_pp(_tile_i) )" />
+        <entry key="_get_ctrl2dbc_sel_2_non_pp" value="( (_tile_i &lt;= PRI_AC_TILE_INDEX) ? &quot;upper_mux_dbc2&quot; : &quot;lower_mux_dbc2&quot; )" />
+        <entry key="_get_ctrl2dbc_sel_2_pp" value="( (_tile_i &gt;= PRI_AC_TILE_INDEX) ? &quot;lower_mux_dbc2&quot; : ((_tile_i &lt; SEC_AC_TILE_INDEX) ? &quot;upper_mux_dbc2&quot; : (`_get_ac_tile_index(_tile_i, 2) == PRI_AC_TILE_INDEX ? &quot;lower_mux_dbc2&quot; : &quot;upper_mux_dbc2&quot;)) )" />
+        <entry key="_get_ctrl2dbc_sel_3" value="( PHY_PING_PONG_EN ? `_get_ctrl2dbc_sel_3_pp(_tile_i)    : `_get_ctrl2dbc_sel_3_non_pp(_tile_i) )" />
+        <entry key="_get_ctrl2dbc_sel_3_non_pp" value="( (_tile_i &lt;= PRI_AC_TILE_INDEX) ? &quot;upper_mux_dbc3&quot; : &quot;lower_mux_dbc3&quot; )" />
+        <entry key="_get_ctrl2dbc_sel_3_pp" value="( (_tile_i &gt;= PRI_AC_TILE_INDEX) ? &quot;lower_mux_dbc3&quot; : ((_tile_i &lt; SEC_AC_TILE_INDEX) ? &quot;upper_mux_dbc3&quot; : (`_get_ac_tile_index(_tile_i, 3) == PRI_AC_TILE_INDEX ? &quot;lower_mux_dbc3&quot; : &quot;upper_mux_dbc3&quot;)) )" />
+        <entry key="_get_ctrl2dbc_switch_0" value="( PHY_PING_PONG_EN ? `_get_ctrl2dbc_switch_0_pp(_tile_i) : `_get_ctrl2dbc_switch_0_non_pp(_tile_i) )" />
+        <entry key="_get_ctrl2dbc_switch_0_non_pp" value="( (_tile_i == PRI_AC_TILE_INDEX) ? &quot;local_tile_dbc0&quot; : ( &#10;                                                             (_tile_i &lt;= PRI_AC_TILE_INDEX) ? &quot;upper_tile_dbc0&quot; : ( &#10;                                                                                              &quot;lower_tile_dbc0&quot; )))" />
+        <entry key="_get_ctrl2dbc_switch_0_pp" value="( (_tile_i == PRI_AC_TILE_INDEX) ? &quot;local_tile_dbc0&quot; : ( &#10;                                                           (_tile_i == SEC_AC_TILE_INDEX) ? &quot;local_tile_dbc0&quot; : ( &#10;                                                           (_tile_i &lt;  SEC_AC_TILE_INDEX) ? &quot;upper_tile_dbc0&quot; : ( &#10;                                                                                            &quot;lower_tile_dbc0&quot; ))))" />
+        <entry key="_get_ctrl2dbc_switch_1" value="( PHY_PING_PONG_EN ? `_get_ctrl2dbc_switch_1_pp(_tile_i) : `_get_ctrl2dbc_switch_1_non_pp(_tile_i) )" />
+        <entry key="_get_ctrl2dbc_switch_1_non_pp" value="( (_tile_i == PRI_AC_TILE_INDEX) ? &quot;local_tile_dbc1&quot; : ( &#10;                                                             (_tile_i &gt;  PRI_AC_TILE_INDEX) ? &quot;lower_tile_dbc1&quot; : ( &#10;                                                                                              &quot;upper_tile_dbc1&quot; )))" />
+        <entry key="_get_ctrl2dbc_switch_1_pp" value="( (_tile_i == PRI_AC_TILE_INDEX) ? &quot;local_tile_dbc1&quot; : ( &#10;                                                           (_tile_i == SEC_AC_TILE_INDEX) ? &quot;upper_tile_dbc1&quot; : ( &#10;                                                           (_tile_i &gt;  PRI_AC_TILE_INDEX) ? &quot;lower_tile_dbc1&quot; : ( &#10;                                                                                            &quot;upper_tile_dbc1&quot; ))))" />
+        <entry key="_get_curr_distance_from_ac_tile" value="( (_tile_i &gt; PRI_AC_TILE_INDEX) ? (_tile_i - PRI_AC_TILE_INDEX) : (PRI_AC_TILE_INDEX - _tile_i) )" />
+        <entry key="_get_db_data_alignment_mode" value="( (NUM_OF_HMC_PORTS &gt; 0) ? &quot;align_ena&quot; : &quot;align_disable&quot; )" />
+        <entry key="_get_db_ptr_pipe_depth" value="( `_get_ac_tile_index(_tile_i, _lane_i) == PRI_AC_TILE_INDEX ? `_get_db_ptr_pipe_depth_pri(_tile_i) : `_get_db_ptr_pipe_depth_sec(_tile_i))" />
+        <entry key="_get_db_ptr_pipe_depth_pri" value="( `_get_max_distance_from_ac_tile_capped - `_get_curr_distance_from_ac_tile(_tile_i) )" />
+        <entry key="_get_db_ptr_pipe_depth_sec" value="( `_get_db_ptr_pipe_depth_pri(_tile_i) + 1)" />
+        <entry key="_get_db_seq_rd_en_full_pipeline" value="( `_get_ac_tile_index(_tile_i, _lane_i) == PRI_AC_TILE_INDEX ? `_get_db_seq_rd_en_full_pipeline_pri(_tile_i, _lane_i) : `_get_db_seq_rd_en_full_pipeline_sec(_tile_i, _lane_i))" />
+        <entry key="_get_db_seq_rd_en_full_pipeline_pri" value="( (NUM_OF_HMC_PORTS &gt; 0) ? (`_get_max_distance_from_ac_tile_capped + 1) : (`_get_db_ptr_pipe_depth(_tile_i, _lane_i) + 1) )" />
+        <entry key="_get_db_seq_rd_en_full_pipeline_sec" value="( `_get_db_seq_rd_en_full_pipeline_pri(_tile_i, _lane_i) + 1 )" />
+        <entry key="_get_dbc0_burst_length" value="( MEM_BURST_LENGTH == 2 ? &quot;bl_2_dbc0&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 4 ? &quot;bl_4_dbc0&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 8 ? &quot;bl_8_dbc0&quot;   : ( &#10;                                                                                   &quot;&quot;              ))))" />
+        <entry key="_get_dbc0_cmd_rate" value="( PHY_HMC_CLK_RATIO == 4 ? &quot;quarter_rate_dbc0&quot; : &quot;half_rate_dbc0&quot; )" />
+        <entry key="_get_dbc0_protocol" value="( HMC_AVL_PROTOCOL_ENUM == &quot;CTRL_AVL_PROTOCOL_MM&quot; ? &quot;amm_dbc0&quot; : &quot;ast_dbc0&quot; )" />
+        <entry key="_get_dbc1_burst_length" value="( MEM_BURST_LENGTH == 2 ? &quot;bl_2_dbc1&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 4 ? &quot;bl_4_dbc1&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 8 ? &quot;bl_8_dbc1&quot;   : ( &#10;                                                                                   &quot;&quot;              ))))" />
+        <entry key="_get_dbc1_cmd_rate" value="( PHY_HMC_CLK_RATIO == 4 ? &quot;quarter_rate_dbc1&quot; : &quot;half_rate_dbc1&quot; )" />
+        <entry key="_get_dbc1_protocol" value="( HMC_AVL_PROTOCOL_ENUM == &quot;CTRL_AVL_PROTOCOL_MM&quot; ? &quot;amm_dbc1&quot; : &quot;ast_dbc1&quot; )" />
+        <entry key="_get_dbc2_burst_length" value="( MEM_BURST_LENGTH == 2 ? &quot;bl_2_dbc2&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 4 ? &quot;bl_4_dbc2&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 8 ? &quot;bl_8_dbc2&quot;   : ( &#10;                                                                                   &quot;&quot;              ))))" />
+        <entry key="_get_dbc2_cmd_rate" value="( PHY_HMC_CLK_RATIO == 4 ? &quot;quarter_rate_dbc2&quot; : &quot;half_rate_dbc2&quot; )" />
+        <entry key="_get_dbc2_protocol" value="( HMC_AVL_PROTOCOL_ENUM == &quot;CTRL_AVL_PROTOCOL_MM&quot; ? &quot;amm_dbc2&quot; : &quot;ast_dbc2&quot; )" />
+        <entry key="_get_dbc3_burst_length" value="( MEM_BURST_LENGTH == 2 ? &quot;bl_2_dbc3&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 4 ? &quot;bl_4_dbc3&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 8 ? &quot;bl_8_dbc3&quot;   : ( &#10;                                                                                   &quot;&quot;              ))))" />
+        <entry key="_get_dbc3_cmd_rate" value="( PHY_HMC_CLK_RATIO == 4 ? &quot;quarter_rate_dbc3&quot; : &quot;half_rate_dbc3&quot; )" />
+        <entry key="_get_dbc3_protocol" value="( HMC_AVL_PROTOCOL_ENUM == &quot;CTRL_AVL_PROTOCOL_MM&quot; ? &quot;amm_dbc3&quot; : &quot;ast_dbc3&quot; )" />
+        <entry key="_get_dbc_pipe_lat" value="( (_tile_i &gt; `_get_ac_tile_index(_tile_i, _lane_i)) ? (_tile_i - `_get_ac_tile_index(_tile_i, _lane_i)) : &#10;                                                                                                               (`_get_ac_tile_index(_tile_i, _lane_i) - _tile_i) )" />
+        <entry key="_get_dbi_rd_en" value="((`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_WRDATA) ? DBI_RD_ENABLE : &quot;false&quot;)" />
+        <entry key="_get_dbi_wr_en" value="((`_get_lane_usage(_tile_i, _lane_i) == LANE_USAGE_WRDATA) ? DBI_WR_ENABLE : &quot;false&quot;)" />
+        <entry key="_get_ddr4_search" value="&quot;ddr3_search&quot;" />
+        <entry key="_get_dll_ctl_static" value="( 10'd0 )" />
+        <entry key="_get_dll_ctlsel" value="( &quot;ctl_dynamic&quot; )" />
+        <entry key="_get_dqs_b_en" value="( (PROTOCOL_ENUM == &quot;PROTOCOL_QDR2&quot;) || (DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X4&quot;) ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_dqs_lgc_burst_length" value="( PROTOCOL_ENUM == &quot;PROTOCOL_RLD3&quot; ? &quot;burst_length_2&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD2&quot; ? &quot;burst_length_2&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR2&quot; ? &quot;burst_length_2&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR4&quot; ? &quot;burst_length_2&quot; : ( &#10;                                                           MEM_BURST_LENGTH == 2 ? &quot;burst_length_2&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 4 ? &quot;burst_length_4&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 8 ? &quot;burst_length_8&quot;   : ( &#10;                                                                                   &quot;&quot;                   ))))))))" />
+        <entry key="_get_dqsin" value="( (`_get_lane_usage(_tile_i, _lane_i) != LANE_USAGE_RDATA &amp;&amp; `_get_lane_usage(_tile_i, _lane_i) != LANE_USAGE_WDATA &amp;&amp; `_get_lane_usage(_tile_i, _lane_i) != LANE_USAGE_WRDATA) ? 2'b0 : ( &#10;                                                           DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X4&quot;       ? t2l_dqsbus_x4[_lane_i]  : ( &#10;                                                           DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X8_X9&quot;    ? t2l_dqsbus_x8[_lane_i]  : ( &#10;                                                           DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X16_X18&quot;  ? t2l_dqsbus_x18[_lane_i] : ( &#10;                                                           DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X32_X36&quot;  ? t2l_dqsbus_x36[_lane_i] : ( &#10;                                                                                                                                    2'b0 ))))))" />
+        <entry key="_get_hmc_burst_length" value="( MEM_BURST_LENGTH == 2 ? &quot;bl_2_ctrl&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 4 ? &quot;bl_4_ctrl&quot;   : ( &#10;                                                           MEM_BURST_LENGTH == 8 ? &quot;bl_8_ctrl&quot;   : ( &#10;                                                                                   &quot;&quot;              ))))" />
+        <entry key="_get_hmc_cmd_rate" value="( PHY_HMC_CLK_RATIO == 4 ? &quot;quarter_rate&quot;      : &quot;half_rate&quot; )" />
+        <entry key="_get_hmc_ctrl_mem_type" value="( PROTOCOL_ENUM == &quot;PROTOCOL_DDR3&quot;   ? &quot;ddr3&quot;       : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_DDR4&quot;   ? &quot;ddr4&quot;       : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD3&quot;   ? &quot;rldram_iii&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_LPDDR3&quot; ? &quot;lpddr3&quot;     : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR2&quot;   ? &quot;rldram_iii&quot;       : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD2&quot;   ? &quot;rldram_iii&quot;       : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR4&quot;   ? &quot;rldram_iii&quot;       : ( &#10;                                                                                                &quot;&quot;             ))))))))" />
+        <entry key="_get_hmc_dbc2ctrl_sel" value="( PHY_PING_PONG_EN ? `_get_hmc_dbc2ctrl_sel_pp(_tile_i) : `_get_hmc_dbc2ctrl_sel_non_pp(_tile_i) )" />
+        <entry key="_get_hmc_dbc2ctrl_sel_non_pp" value="( PRI_HMC_DBC_SHADOW_LANE_INDEX == 0 ? &quot;dbc0_to_local&quot; : ( &#10;                                                           PRI_HMC_DBC_SHADOW_LANE_INDEX == 1 ? &quot;dbc1_to_local&quot; : ( &#10;                                                           PRI_HMC_DBC_SHADOW_LANE_INDEX == 2 ? &quot;dbc2_to_local&quot; : ( &#10;                                                                                                &quot;dbc3_to_local&quot; ))))" />
+        <entry key="_get_hmc_dbc2ctrl_sel_pp" value="( (_tile_i != SEC_AC_TILE_INDEX) ? `_get_hmc_dbc2ctrl_sel_non_pp(_tile_i) : ( &#10;                                                           (`_get_ac_tile_index(SEC_AC_TILE_INDEX, 0) == SEC_AC_TILE_INDEX) ? &quot;dbc0_to_local&quot; : ( &#10;                                                           (`_get_ac_tile_index(SEC_AC_TILE_INDEX, 1) == SEC_AC_TILE_INDEX) ? &quot;dbc1_to_local&quot; : ( &#10;                                                           (`_get_ac_tile_index(SEC_AC_TILE_INDEX, 2) == SEC_AC_TILE_INDEX) ? &quot;dbc2_to_local&quot; : ( &#10;                                                                                                                              &quot;dbc3_to_local&quot; )))))" />
+        <entry key="_get_hmc_or_core" value="( NUM_OF_HMC_PORTS == 0 ? &quot;core&quot; : &quot;hmc&quot; )" />
+        <entry key="_get_hmc_protocol" value="( HMC_AVL_PROTOCOL_ENUM == &quot;CTRL_AVL_PROTOCOL_MM&quot; ? &quot;amm_in&quot;   : &quot;ast_in&quot; )" />
+        <entry key="_get_hmc_tid" value="( HMC_TIDS[_tile_i * 9 +: 9] )" />
+        <entry key="_get_lane" value="( (`_get_pin_index(_loc, _port_i) / PINS_PER_LANE) % LANES_PER_TILE )" />
+        <entry key="_get_lane_mode_rate_in" value="( PHY_HMC_CLK_RATIO == 4 ? &quot;in_rate_1_4&quot; : ( &#10;                                                           PHY_HMC_CLK_RATIO == 2 ? &quot;in_rate_1_2&quot; : ( &#10;                                                                                    &quot;in_rate_full&quot; )))" />
+        <entry key="_get_lane_mode_rate_out" value="( PLL_VCO_TO_MEM_CLK_FREQ_RATIO == 8 ? &quot;out_rate_1_8&quot; : ( &#10;                                                           PLL_VCO_TO_MEM_CLK_FREQ_RATIO == 4 ? &quot;out_rate_1_4&quot; : ( &#10;                                                           PLL_VCO_TO_MEM_CLK_FREQ_RATIO == 2 ? &quot;out_rate_1_2&quot; : ( &#10;                                                                                                &quot;out_rate_full&quot; ))))" />
+        <entry key="_get_lane_tid" value="( LANE_TIDS[(_tile_i * LANES_PER_TILE + _lane_i) * 9 +: 9] )" />
+        <entry key="_get_lane_usage" value="( LANES_USAGE[(_tile_i * LANES_PER_TILE + _lane_i) * 3 +: 3] )" />
+        <entry key="_get_max" value="( (_i) &gt; (_j) ? (_i) : (_j) )" />
+        <entry key="_get_max_distance_from_ac_tile" value="( `_get_max( (NUM_OF_RTL_TILES - PRI_AC_TILE_INDEX - 1), PRI_AC_TILE_INDEX ) )" />
+        <entry key="_get_max_distance_from_ac_tile_capped" value="( PHY_PING_PONG_EN ? `_get_min(2, `_get_max_distance_from_ac_tile) : `_get_max_distance_from_ac_tile )" />
+        <entry key="_get_min" value="( (_i) &lt; (_j) ? (_i) : (_j) )" />
+        <entry key="_get_pa_exponent" value="( (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 1   ? 3'b000 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 2   ? 3'b001 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 4   ? 3'b010 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 8   ? 3'b011 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 16  ? 3'b100 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 32  ? 3'b101 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 64  ? 3'b110 : ( &#10;                                                           (_clk_ratio * PLL_VCO_TO_MEM_CLK_FREQ_RATIO) == 128 ? 3'b111 : ( &#10;                                                                                                                 3'b000 )))))))))" />
+        <entry key="_get_pa_exponent_0" value="( (`_get_pa_exponent(`_get_cpa_0_clk_ratio)) )" />
+        <entry key="_get_pa_exponent_1" value="( (`_get_pa_exponent(`_get_cpa_1_clk_ratio)) )" />
+        <entry key="_get_pa_feedback_divider_c0" value="( (`_get_cpa_0_clk_ratio * 2 == C2P_P2C_CLK_RATIO) ? &quot;div_by_2_c0&quot; : &quot;div_by_1_c0&quot; )" />
+        <entry key="_get_pa_feedback_divider_p0" value="( (`_get_cpa_0_clk_ratio == C2P_P2C_CLK_RATIO * 2) ? &quot;div_by_2_p0&quot; : &quot;div_by_1_p0&quot; )" />
+        <entry key="_get_pa_track_speed" value="( 5'h0c )" />
+        <entry key="_get_pin" value="(  `_get_pin_index(_loc, _port_i) % PINS_PER_LANE )" />
+        <entry key="_get_pin_ac_hmc_data_override_ena" value="( PINS_AC_HMC_DATA_OVERRIDE_ENA[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_pin_count" value="( _loc[ 9 : 0 ] )" />
+        <entry key="_get_pin_data_in_mode_raw" value="( PINS_DATA_IN_MODE[(_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i) * 3 +: 3] )" />
+        <entry key="_get_pin_data_in_mode_str" value="( `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_DISABLED         ? &quot;disabled&quot;                    : ( &#10;                                                              `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_SSTL_IN          ? &quot;sstl_in&quot;                     : ( &#10;                                                              `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_LOOPBACK_IN      ? &quot;loopback_in&quot;                 : ( &#10;                                                              `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_XOR_LOOPBACK_IN  ? &quot;xor_loopback_in&quot;             : ( &#10;                                                              `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_DIFF_IN          ? &quot;differential_in&quot;             : ( &#10;                                                              `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_DIFF_IN_AVL_OUT  ? &quot;differential_in_avl_out&quot;     : ( &#10;                                                              `_get_pin_data_in_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_DATA_IN_MODE_DIFF_IN_X12_OUT  ? &quot;differential_in_x12_out&quot;     : ( &#10;                                                                                                                                                          &quot;differential_in_avl_x12_out&quot;   ))))))))" />
+        <entry key="_get_pin_db_in_bypass" value="( PINS_DB_IN_BYPASS[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_pin_db_oe_bypass" value="( PINS_DB_OE_BYPASS[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_pin_db_out_bypass" value="( PINS_DB_OUT_BYPASS[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_pin_ddr_raw" value="( PINS_RATE[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] )" />
+        <entry key="_get_pin_ddr_str" value="( `_get_pin_ddr_raw(_tile_i, _lane_i, _pin_i) == PIN_RATE_DDR ? &quot;mode_ddr&quot; : &quot;mode_sdr&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_0" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_1" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_10" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_b&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_11" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_b&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_2" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_3" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_4" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_5" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_6" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_b&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_7" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_b&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_8" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_dqs_x4_mode_9" value="( (DQS_BUS_MODE_ENUM != &quot;DQS_BUS_MODE_X4&quot;) ? &quot;dqs_x4_not_used&quot; : &quot;dqs_x4_a&quot; )" />
+        <entry key="_get_pin_gpio_or_ddr" value="( PINS_GPIO_MODE[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;gpio&quot; : &quot;ddr&quot; )" />
+        <entry key="_get_pin_index" value="( _loc[ (_port_i + 1) * 10 +: 10 ] )" />
+        <entry key="_get_pin_invert_oe" value="( PINS_INVERT_OE[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_pin_invert_wr" value="( PINS_INVERT_WR[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] ? &quot;true&quot; : &quot;false&quot; )" />
+        <entry key="_get_pin_oct_mode_raw" value="( PINS_OCT_MODE[(_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i)] )" />
+        <entry key="_get_pin_oct_mode_str" value="( `_get_pin_oct_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_OCT_STATIC_OFF  ? &quot;static_off&quot; : ( &#10;                                                            `_get_pin_oct_mode_raw(_tile_i, _lane_i, _pin_i) == PIN_OCT_DYNAMIC     ? &quot;dynamic&quot; : ( &#10;                                                                                                                                      &quot;dynamic&quot; )))" />
+        <entry key="_get_pin_usage" value="( PINS_USAGE[_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i] )" />
+        <entry key="_get_pin_wdb_raw" value="( PINS_WDB[(_tile_i * LANES_PER_TILE * PINS_PER_LANE + _lane_i * PINS_PER_LANE + _pin_i) * 3 +: 3] )" />
+        <entry key="_get_pin_wdb_str" value="( `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_AC_CORE       ? &quot;ac_core&quot;       : ( &#10;                                                           `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_AC_HMC        ? &quot;ac_hmc&quot;        : ( &#10;                                                           `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_DQS_WDB_MODE  ? &quot;dqs_wdb_mode&quot;  : ( &#10;                                                           `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_DQS_MODE      ? &quot;dqs_mode&quot;      : ( &#10;                                                           `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_DM_WDB_MODE   ? &quot;dm_wdb_mode&quot;   : ( &#10;                                                           `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_DM_MODE       ? &quot;dm_mode&quot;       : ( &#10;                                                           `_get_pin_wdb_raw(_tile_i, _lane_i, _pin_i) == PIN_WDB_DQ_WDB_MODE   ? &quot;dq_wdb_mode&quot;   : ( &#10;                                                                                                                                  &quot;dq_mode&quot;         ))))))))" />
+        <entry key="_get_preamble_track_dqs_enable_mode" value="( PROTOCOL_ENUM == &quot;PROTOCOL_DDR4&quot;   ? &quot;preamble_track_dqs_enable&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_DDR3&quot;   ? &quot;preamble_track_dqs_enable&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_LPDDR3&quot; ? &quot;preamble_track_dqs_enable&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD3&quot;   ? &quot;preamble_track_toggler&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR2&quot;   ? &quot;preamble_track_toggler&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD2&quot;   ? &quot;preamble_track_toggler&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR4&quot;   ? &quot;preamble_track_toggler&quot; : ( &#10;                                                                                                &quot;&quot; ))))))))" />
+        <entry key="_get_pst_en_shrink" value="( PROTOCOL_ENUM == &quot;PROTOCOL_DDR4&quot;   ? ((DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X4&quot;) ? &quot;shrink_1_1&quot; : &quot;shrink_1_0&quot;) : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_DDR3&quot;   ? &quot;shrink_1_1&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_LPDDR3&quot; ? &quot;shrink_1_1&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD3&quot;   ? &quot;shrink_0_1&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR2&quot;   ? &quot;shrink_0_1&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD2&quot;   ? &quot;shrink_0_1&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR4&quot;   ? &quot;shrink_0_1&quot; : ( &#10;                                                                                              &quot;&quot; ))))))))" />
+        <entry key="_get_pst_preamble_mode" value="( PROTOCOL_ENUM == &quot;PROTOCOL_DDR4&quot;   ? ((DQS_BUS_MODE_ENUM == &quot;DQS_BUS_MODE_X4&quot;) ? &quot;ddr3_preamble&quot; : &quot;ddr4_preamble&quot;) : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_DDR3&quot;   ? &quot;ddr3_preamble&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_LPDDR3&quot; ? &quot;ddr3_preamble&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD3&quot;   ? &quot;ddr3_preamble&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR2&quot;   ? &quot;ddr3_preamble&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_RLD2&quot;   ? &quot;ddr3_preamble&quot; : ( &#10;                                                           PROTOCOL_ENUM == &quot;PROTOCOL_QDR4&quot;   ? &quot;ddr3_preamble&quot; : ( &#10;                                                                                                &quot;&quot; ))))))))" />
+        <entry key="_get_tile" value="(  `_get_pin_index(_loc, _port_i) / (PINS_PER_LANE * LANES_PER_TILE) )" />
+        <entry key="_l2core_afi" value="l2core_data&#10;   [`_get_tile(_loc, _port_i)]&#10;   [`_get_lane(_loc, _port_i)]&#10;   [(`_get_pin(_loc, _port_i) * 8) + _phase_i]" />
+        <entry key="_l2core_data" value="l2core_data&#10;   [`_get_tile(RD_PINLOC, _port_i)]&#10;   [`_get_lane(RD_PINLOC, _port_i)]&#10;   [(`_get_pin(RD_PINLOC, _port_i) * 8) + _phase_i]" />
+        <entry key="_sel_hmc_def" value="( PHY_PING_PONG_EN ? ((_tile_i == SEC_AC_TILE_INDEX) ? _sec : (_tile_i == PRI_AC_TILE_INDEX) ? _pri : _def) : _pri )" />
+        <entry key="_sel_hmc_lane" value="( (PHY_PING_PONG_EN &amp;&amp; (_tile_i &lt; SEC_AC_TILE_INDEX || (_tile_i == SEC_AC_TILE_INDEX &amp;&amp; _lane_i &lt; 2))) ? _sec : _pri )" />
+        <entry key="_sel_hmc_val" value="( PHY_PING_PONG_EN ? (_tile_i &lt;= SEC_AC_TILE_INDEX ? _sec : _pri) : _pri )" />
+        <entry key="_unused_core2l_afi" value="core2l_data&#10;   [_pin_i / (PINS_PER_LANE * LANES_PER_TILE)]&#10;   [(_pin_i / PINS_PER_LANE) % LANES_PER_TILE]&#10;   [((_pin_i % PINS_PER_LANE) * 8) +: 8]" />
+        <entry key="_unused_core2l_data" value="core2l_data&#10;   [_pin_i / (PINS_PER_LANE * LANES_PER_TILE)]&#10;   [(_pin_i / PINS_PER_LANE) % LANES_PER_TILE]&#10;   [((_pin_i % PINS_PER_LANE) * 8) +: 8]" />
+        <entry key="_unused_core2l_oe" value="core2l_oe&#10;   [_pin_i / (PINS_PER_LANE * LANES_PER_TILE)]&#10;   [(_pin_i / PINS_PER_LANE) % LANES_PER_TILE]&#10;   [((_pin_i % PINS_PER_LANE) * 4) +: 4]" />
       </map>
     </option>
     <option name="dependencies">
       <map>
+        <entry key="ALTERA_A10_IOPLL_BOOTSTRAP">
+          <value>
+            <set>
+              <option value="altera_emif_arch_nf_pll.sv" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ALTERA_ALT_MEM_IF_PHY_FAST_SIM_MODEL">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="ALTERA_EMIF_ENABLE_ISSP">
+          <value>
+            <set>
+              <option value="altera_emif_arch_nf_pll.sv" />
+              <option value="altera_emif_arch_nf_cal_counter.sv" />
+              <option value="altera_emif_arch_nf_core_clks_rsts.sv" />
+              <option value="ghrd_10as066n2_emif_hps_altera_emif_arch_nf_171_qhcayby_top.sv" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ALTERA_FREEZE_ASSERTION_ON">
+          <value>
+            <set>
+              <option value="altera_freeze_control.sv" />
+              <option value="altera_avlmm_slv_freeze_bridge.sv" />
+              <option value="altera_avlmm_mst_freeze_bridge.sv" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ALTERA_RESERVED_QIS">
+          <value>
+            <set>
+              <option value="altera_mem_if_oct_cyclonev.sv" />
+              <option value="altera_jtag_sld_node.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BOARD_DELAY_MODEL">
+          <value>
+            <set>
+              <option value="altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv" />
+            </set>
+          </value>
+        </entry>
         <entry key="CLOCK_PERIOD">
           <value>
             <set>
@@ -36,57 +2352,1160 @@
             </set>
           </value>
         </entry>
-        <entry key="RANDOM">
+        <entry key="CL_DRAM_DMA_DEFINES">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="RANDOMIZE">
+        <entry key="CL_NAME">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="DISABLE_ABSTRACT_PHY_FOR_SYNTH">
           <value>
             <set>
-              <option value="Top.v" />
+              <option value="ghrd_10as066n2_emif_hps_altera_emif_arch_nf_171_qhcayby_top.sv" />
             </set>
           </value>
         </entry>
-        <entry key="RANDOMIZE_GARBAGE_ASSIGN">
+        <entry key="DISABLE_VJTAG_DEBUG">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="FAMILY_HAS_NO_DYNCONF">
           <value>
             <set>
-              <option value="Top.v" />
+              <option value="altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv" />
             </set>
           </value>
         </entry>
-        <entry key="RANDOMIZE_INVALID_ASSIGN">
+        <entry key="FORMAL_VERIFICATION">
           <value>
             <set>
-              <option value="Top.v" />
+              <option value="altera_mem_if_dll_cyclonev.sv" />
+              <option value="altera_mem_if_oct_cyclonev.sv" />
             </set>
           </value>
         </entry>
-        <entry key="RANDOMIZE_MEM_INIT">
+        <entry key="FPGA_LESS_RST">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="MODEL_TECH">
           <value>
             <set>
-              <option value="Top.v" />
+              <option value="altera_avalon_st_jtag_interface.v" />
             </set>
           </value>
         </entry>
-        <entry key="RANDOMIZE_REG_INIT">
+        <entry key="SH_CL_ASYNC">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="SH_SDA">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="SYNTH_FOR_SIM">
           <value>
             <set>
-              <option value="Top.v" />
+              <option value="hps_sdram_p0_phy_csr.sv" />
             </set>
+          </value>
+        </entry>
+        <entry key="__ALTERA_STD__METASTABLE_SIM">
+          <value>
+            <set>
+              <option value="altera_std_synchronizer_nocut.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="__ALTERA_STD__METASTABLE_SIM_VERBOSE">
+          <value>
+            <set>
+              <option value="altera_std_synchronizer_nocut.v" />
+            </set>
+          </value>
+        </entry>
+        <entry key="_abphy_get_lane">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_abphy_get_pin_index">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_abphy_get_tile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_connect_in">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_connect_in_with_regs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_connect_out">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_connect_out_with_regs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_core2l_afi">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_core2l_data">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_core2l_datamask">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_core2l_oe">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ac_hmc">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ac_tile_index">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_broadcast_chain_index">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_center_tid">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_chain_index_for_lane">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_chain_index_for_tile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_rd_data_rdy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_rd_data_rdy_of_hmc">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_data_vld">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_data_vld_of_hmc">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_ecc_info">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_core2dbc_wr_ecc_info_of_hmc">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_cpa_0_clk_ratio">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_cpa_1_clk_ratio">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_en">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_1">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_2">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_3">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_4">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_5">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_6">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_7">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_pin_pos_8">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_crc_x4_or_x8_or_x9">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_0_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_1_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_2_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_sel_3_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_0_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ctrl2dbc_switch_1_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_curr_distance_from_ac_tile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_data_alignment_mode">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth_pri">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_ptr_pipe_depth_sec">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline_pri">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_db_seq_rd_en_full_pipeline_sec">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_burst_length">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_cmd_rate">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc0_protocol">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_burst_length">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_cmd_rate">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc1_protocol">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_burst_length">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_cmd_rate">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc2_protocol">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_burst_length">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_cmd_rate">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc3_protocol">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbc_pipe_lat">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbi_rd_en">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dbi_wr_en">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_ddr4_search">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dll_ctl_static">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dll_ctlsel">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dqs_b_en">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dqs_lgc_burst_length">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_dqsin">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_burst_length">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_cmd_rate">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_ctrl_mem_type">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel_non_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_dbc2ctrl_sel_pp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_or_core">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_protocol">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_hmc_tid">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_lane">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_lane_mode_rate_in">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_lane_mode_rate_out">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_lane_tid">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_lane_usage">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_max">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_max_distance_from_ac_tile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_max_distance_from_ac_tile_capped">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_min">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent_0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pa_exponent_1">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pa_feedback_divider_c0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pa_feedback_divider_p0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pa_track_speed">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_ac_hmc_data_override_ena">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_count">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_data_in_mode_raw">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_data_in_mode_str">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_db_in_bypass">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_db_oe_bypass">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_db_out_bypass">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_ddr_raw">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_ddr_str">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_0">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_1">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_10">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_11">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_2">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_3">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_4">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_5">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_6">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_7">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_8">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_dqs_x4_mode_9">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_gpio_or_ddr">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_index">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_invert_oe">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_invert_wr">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_oct_mode_raw">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_oct_mode_str">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_usage">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_wdb_raw">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pin_wdb_str">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_preamble_track_dqs_enable_mode">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pst_en_shrink">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_pst_preamble_mode">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_get_tile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_l2core_afi">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_l2core_data">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_sel_hmc_def">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_sel_hmc_lane">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_sel_hmc_val">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_unused_core2l_afi">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_unused_core2l_data">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="_unused_core2l_oe">
+          <value>
+            <set />
           </value>
         </entry>
       </map>
     </option>
     <option name="offset">
       <map>
-        <entry key="RANDOM" value="1036" />
+        <entry key="ALTERA_ALT_MEM_IF_PHY_FAST_SIM_MODEL" value="3367" />
+        <entry key="CL_DRAM_DMA_DEFINES" value="639" />
+        <entry key="CL_NAME" value="748" />
+        <entry key="DISABLE_VJTAG_DEBUG" value="1071" />
+        <entry key="FPGA_LESS_RST" value="933" />
+        <entry key="SH_CL_ASYNC" value="1013" />
+        <entry key="SH_SDA" value="956" />
+        <entry key="_abphy_get_lane" value="74443" />
+        <entry key="_abphy_get_pin_index" value="74246" />
+        <entry key="_abphy_get_tile" value="74327" />
+        <entry key="_connect_in" value="3964" />
+        <entry key="_connect_in_with_regs" value="4336" />
+        <entry key="_connect_out" value="2520" />
+        <entry key="_connect_out_with_regs" value="3455" />
+        <entry key="_core2l_afi" value="1632" />
+        <entry key="_core2l_data" value="1509" />
+        <entry key="_core2l_datamask" value="1689" />
+        <entry key="_core2l_oe" value="1802" />
+        <entry key="_get_ac_hmc" value="31241" />
+        <entry key="_get_ac_tile_index" value="8262" />
+        <entry key="_get_broadcast_chain_index" value="1857" />
+        <entry key="_get_center_tid" value="35714" />
+        <entry key="_get_chain_index_for_lane" value="1503" />
+        <entry key="_get_chain_index_for_tile" value="1406" />
+        <entry key="_get_core2dbc_rd_data_rdy" value="33371" />
+        <entry key="_get_core2dbc_rd_data_rdy_of_hmc" value="33189" />
+        <entry key="_get_core2dbc_wr_data_vld" value="32045" />
+        <entry key="_get_core2dbc_wr_data_vld_of_hmc" value="31863" />
+        <entry key="_get_core2dbc_wr_ecc_info" value="34689" />
+        <entry key="_get_core2dbc_wr_ecc_info_of_hmc" value="34515" />
+        <entry key="_get_cpa_0_clk_ratio" value="20111" />
+        <entry key="_get_cpa_1_clk_ratio" value="20388" />
+        <entry key="_get_crc_en" value="41056" />
+        <entry key="_get_crc_pin_pos_0" value="41737" />
+        <entry key="_get_crc_pin_pos_1" value="41787" />
+        <entry key="_get_crc_pin_pos_2" value="41837" />
+        <entry key="_get_crc_pin_pos_3" value="41887" />
+        <entry key="_get_crc_pin_pos_4" value="41937" />
+        <entry key="_get_crc_pin_pos_5" value="42035" />
+        <entry key="_get_crc_pin_pos_6" value="42133" />
+        <entry key="_get_crc_pin_pos_7" value="42231" />
+        <entry key="_get_crc_pin_pos_8" value="42330" />
+        <entry key="_get_crc_x4_or_x8_or_x9" value="41281" />
+        <entry key="_get_ctrl2dbc_sel_0" value="28306" />
+        <entry key="_get_ctrl2dbc_sel_0_non_pp" value="24860" />
+        <entry key="_get_ctrl2dbc_sel_0_pp" value="26905" />
+        <entry key="_get_ctrl2dbc_sel_1" value="28461" />
+        <entry key="_get_ctrl2dbc_sel_1_non_pp" value="24992" />
+        <entry key="_get_ctrl2dbc_sel_1_pp" value="27164" />
+        <entry key="_get_ctrl2dbc_sel_2" value="28616" />
+        <entry key="_get_ctrl2dbc_sel_2_non_pp" value="25124" />
+        <entry key="_get_ctrl2dbc_sel_2_pp" value="27423" />
+        <entry key="_get_ctrl2dbc_sel_3" value="28771" />
+        <entry key="_get_ctrl2dbc_sel_3_non_pp" value="25256" />
+        <entry key="_get_ctrl2dbc_sel_3_pp" value="27682" />
+        <entry key="_get_ctrl2dbc_switch_0" value="27990" />
+        <entry key="_get_ctrl2dbc_switch_0_non_pp" value="24154" />
+        <entry key="_get_ctrl2dbc_switch_0_pp" value="25977" />
+        <entry key="_get_ctrl2dbc_switch_1" value="28148" />
+        <entry key="_get_ctrl2dbc_switch_1_non_pp" value="24507" />
+        <entry key="_get_ctrl2dbc_switch_1_pp" value="26441" />
+        <entry key="_get_curr_distance_from_ac_tile" value="10321" />
+        <entry key="_get_db_data_alignment_mode" value="11828" />
+        <entry key="_get_db_ptr_pipe_depth" value="10721" />
+        <entry key="_get_db_ptr_pipe_depth_pri" value="10476" />
+        <entry key="_get_db_ptr_pipe_depth_sec" value="10620" />
+        <entry key="_get_db_seq_rd_en_full_pipeline" value="11589" />
+        <entry key="_get_db_seq_rd_en_full_pipeline_pri" value="11278" />
+        <entry key="_get_db_seq_rd_en_full_pipeline_sec" value="11464" />
+        <entry key="_get_dbc0_burst_length" value="15952" />
+        <entry key="_get_dbc0_cmd_rate" value="14192" />
+        <entry key="_get_dbc0_protocol" value="14883" />
+        <entry key="_get_dbc1_burst_length" value="16423" />
+        <entry key="_get_dbc1_cmd_rate" value="14317" />
+        <entry key="_get_dbc1_protocol" value="15018" />
+        <entry key="_get_dbc2_burst_length" value="16894" />
+        <entry key="_get_dbc2_cmd_rate" value="14442" />
+        <entry key="_get_dbc2_protocol" value="15153" />
+        <entry key="_get_dbc3_burst_length" value="17365" />
+        <entry key="_get_dbc3_cmd_rate" value="14567" />
+        <entry key="_get_dbc3_protocol" value="15288" />
+        <entry key="_get_dbc_pipe_lat" value="8584" />
+        <entry key="_get_dbi_rd_en" value="40824" />
+        <entry key="_get_dbi_wr_en" value="40681" />
+        <entry key="_get_ddr4_search" value="38017" />
+        <entry key="_get_dll_ctl_static" value="40231" />
+        <entry key="_get_dll_ctlsel" value="40156" />
+        <entry key="_get_dqs_b_en" value="38929" />
+        <entry key="_get_dqs_lgc_burst_length" value="17779" />
+        <entry key="_get_dqsin" value="21197" />
+        <entry key="_get_hmc_burst_length" value="15481" />
+        <entry key="_get_hmc_cmd_rate" value="14072" />
+        <entry key="_get_hmc_ctrl_mem_type" value="12970" />
+        <entry key="_get_hmc_dbc2ctrl_sel" value="30701" />
+        <entry key="_get_hmc_dbc2ctrl_sel_non_pp" value="29500" />
+        <entry key="_get_hmc_dbc2ctrl_sel_pp" value="29972" />
+        <entry key="_get_hmc_or_core" value="13914" />
+        <entry key="_get_hmc_protocol" value="14750" />
+        <entry key="_get_hmc_tid" value="35805" />
+        <entry key="_get_lane" value="1336" />
+        <entry key="_get_lane_mode_rate_in" value="12075" />
+        <entry key="_get_lane_mode_rate_out" value="12444" />
+        <entry key="_get_lane_tid" value="35893" />
+        <entry key="_get_lane_usage" value="1526" />
+        <entry key="_get_max" value="1116" />
+        <entry key="_get_max_distance_from_ac_tile" value="9358" />
+        <entry key="_get_max_distance_from_ac_tile_capped" value="10159" />
+        <entry key="_get_min" value="1203" />
+        <entry key="_get_pa_exponent" value="18768" />
+        <entry key="_get_pa_exponent_0" value="20233" />
+        <entry key="_get_pa_exponent_1" value="20467" />
+        <entry key="_get_pa_feedback_divider_c0" value="21054" />
+        <entry key="_get_pa_feedback_divider_p0" value="20742" />
+        <entry key="_get_pa_track_speed" value="40061" />
+        <entry key="_get_pin" value="1440" />
+        <entry key="_get_pin_ac_hmc_data_override_ena" value="5172" />
+        <entry key="_get_pin_count" value="792" />
+        <entry key="_get_pin_data_in_mode_raw" value="6130" />
+        <entry key="_get_pin_data_in_mode_str" value="6301" />
+        <entry key="_get_pin_db_in_bypass" value="4170" />
+        <entry key="_get_pin_db_oe_bypass" value="4521" />
+        <entry key="_get_pin_db_out_bypass" value="4345" />
+        <entry key="_get_pin_ddr_raw" value="2230" />
+        <entry key="_get_pin_ddr_str" value="2378" />
+        <entry key="_get_pin_dqs_x4_mode_0" value="22132" />
+        <entry key="_get_pin_dqs_x4_mode_1" value="22266" />
+        <entry key="_get_pin_dqs_x4_mode_10" value="23472" />
+        <entry key="_get_pin_dqs_x4_mode_11" value="23606" />
+        <entry key="_get_pin_dqs_x4_mode_2" value="22400" />
+        <entry key="_get_pin_dqs_x4_mode_3" value="22534" />
+        <entry key="_get_pin_dqs_x4_mode_4" value="22668" />
+        <entry key="_get_pin_dqs_x4_mode_5" value="22802" />
+        <entry key="_get_pin_dqs_x4_mode_6" value="22936" />
+        <entry key="_get_pin_dqs_x4_mode_7" value="23070" />
+        <entry key="_get_pin_dqs_x4_mode_8" value="23204" />
+        <entry key="_get_pin_dqs_x4_mode_9" value="23338" />
+        <entry key="_get_pin_gpio_or_ddr" value="5957" />
+        <entry key="_get_pin_index" value="839" />
+        <entry key="_get_pin_invert_oe" value="4999" />
+        <entry key="_get_pin_invert_wr" value="4827" />
+        <entry key="_get_pin_oct_mode_raw" value="2075" />
+        <entry key="_get_pin_oct_mode_str" value="5371" />
+        <entry key="_get_pin_usage" value="2583" />
+        <entry key="_get_pin_wdb_raw" value="2790" />
+        <entry key="_get_pin_wdb_str" value="2948" />
+        <entry key="_get_preamble_track_dqs_enable_mode" value="36012" />
+        <entry key="_get_pst_en_shrink" value="39089" />
+        <entry key="_get_pst_preamble_mode" value="37019" />
+        <entry key="_get_tile" value="1232" />
+        <entry key="_l2core_afi" value="1972" />
+        <entry key="_l2core_data" value="1879" />
+        <entry key="_sel_hmc_def" value="42963" />
+        <entry key="_sel_hmc_lane" value="43355" />
+        <entry key="_sel_hmc_val" value="42629" />
+        <entry key="_unused_core2l_afi" value="2145" />
+        <entry key="_unused_core2l_data" value="2062" />
+        <entry key="_unused_core2l_oe" value="2334" />
       </map>
     </option>
     <option name="source">
       <map>
-        <entry key="RANDOM" value="Top.v" />
+        <entry key="ALTERA_ALT_MEM_IF_PHY_FAST_SIM_MODEL" value="hps_sdram_p0.sv" />
+        <entry key="CL_DRAM_DMA_DEFINES" value="cl_dram_dma_defines.vh" />
+        <entry key="CL_NAME" value="cl_dram_dma_defines.vh" />
+        <entry key="DISABLE_VJTAG_DEBUG" value="cl_dram_dma_defines.vh" />
+        <entry key="FPGA_LESS_RST" value="cl_dram_dma_defines.vh" />
+        <entry key="SH_CL_ASYNC" value="cl_dram_dma_defines.vh" />
+        <entry key="SH_SDA" value="cl_dram_dma_defines.vh" />
+        <entry key="_abphy_get_lane" value="altera_emif_arch_nf_io_tiles_abphy.sv" />
+        <entry key="_abphy_get_pin_index" value="altera_emif_arch_nf_io_tiles_abphy.sv" />
+        <entry key="_abphy_get_tile" value="altera_emif_arch_nf_io_tiles_abphy.sv" />
+        <entry key="_connect_in" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_connect_in_with_regs" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_connect_out" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_connect_out_with_regs" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_core2l_afi" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_core2l_data" value="altera_emif_arch_nf_hmc_amm_data_if.sv" />
+        <entry key="_core2l_datamask" value="altera_emif_arch_nf_hmc_amm_data_if.sv" />
+        <entry key="_core2l_oe" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_get_ac_hmc" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ac_tile_index" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_broadcast_chain_index" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_center_tid" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_chain_index_for_lane" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_chain_index_for_tile" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_core2dbc_rd_data_rdy" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_core2dbc_rd_data_rdy_of_hmc" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_core2dbc_wr_data_vld" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_core2dbc_wr_data_vld_of_hmc" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_core2dbc_wr_ecc_info" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_core2dbc_wr_ecc_info_of_hmc" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_cpa_0_clk_ratio" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_cpa_1_clk_ratio" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_en" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_1" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_2" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_3" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_4" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_5" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_6" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_7" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_pin_pos_8" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_crc_x4_or_x8_or_x9" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_0_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_0_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_1" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_1_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_1_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_2" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_2_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_2_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_3" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_3_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_sel_3_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_switch_0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_switch_0_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_switch_0_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_switch_1" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_switch_1_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ctrl2dbc_switch_1_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_curr_distance_from_ac_tile" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_data_alignment_mode" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_ptr_pipe_depth" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_ptr_pipe_depth_pri" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_ptr_pipe_depth_sec" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_seq_rd_en_full_pipeline" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_seq_rd_en_full_pipeline_pri" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_db_seq_rd_en_full_pipeline_sec" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc0_burst_length" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc0_cmd_rate" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc0_protocol" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc1_burst_length" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc1_cmd_rate" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc1_protocol" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc2_burst_length" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc2_cmd_rate" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc2_protocol" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc3_burst_length" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc3_cmd_rate" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc3_protocol" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbc_pipe_lat" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbi_rd_en" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dbi_wr_en" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_ddr4_search" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dll_ctl_static" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dll_ctlsel" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dqs_b_en" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dqs_lgc_burst_length" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_dqsin" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_burst_length" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_cmd_rate" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_ctrl_mem_type" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_dbc2ctrl_sel" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_dbc2ctrl_sel_non_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_dbc2ctrl_sel_pp" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_or_core" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_protocol" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_hmc_tid" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_lane" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_get_lane_mode_rate_in" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_lane_mode_rate_out" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_lane_tid" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_lane_usage" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_get_max" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_max_distance_from_ac_tile" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_max_distance_from_ac_tile_capped" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_min" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pa_exponent" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pa_exponent_0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pa_exponent_1" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pa_feedback_divider_c0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pa_feedback_divider_p0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pa_track_speed" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_get_pin_ac_hmc_data_override_ena" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_count" value="altera_emif_arch_nf_bufs.sv" />
+        <entry key="_get_pin_data_in_mode_raw" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_data_in_mode_str" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_db_in_bypass" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_db_oe_bypass" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_db_out_bypass" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_ddr_raw" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_ddr_str" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_0" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_1" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_10" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_11" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_2" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_3" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_4" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_5" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_6" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_7" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_8" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_dqs_x4_mode_9" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_gpio_or_ddr" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_index" value="altera_emif_arch_nf_bufs.sv" />
+        <entry key="_get_pin_invert_oe" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_invert_wr" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_oct_mode_raw" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_oct_mode_str" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_usage" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_wdb_raw" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pin_wdb_str" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_preamble_track_dqs_enable_mode" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pst_en_shrink" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_pst_preamble_mode" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_get_tile" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_l2core_afi" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_l2core_data" value="altera_emif_arch_nf_hmc_amm_data_if.sv" />
+        <entry key="_sel_hmc_def" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_sel_hmc_lane" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_sel_hmc_val" value="altera_emif_arch_nf_io_tiles.sv" />
+        <entry key="_unused_core2l_afi" value="altera_emif_arch_nf_afi_if.sv" />
+        <entry key="_unused_core2l_data" value="altera_emif_arch_nf_hmc_amm_data_if.sv" />
+        <entry key="_unused_core2l_oe" value="altera_emif_arch_nf_afi_if.sv" />
       </map>
     </option>
+    <option name="version" value="150" />
   </component>
 </project>
