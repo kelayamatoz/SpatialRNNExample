@@ -142,8 +142,8 @@ object RNN extends SpatialApp {
 
       Sequential.Foreach(nTimeSteps.to[I32] by 1.to[I32]) { _ =>
         // TODO: the two-level loop splitting is a CGRA specific optimization.
-        // TODO: A CGRA has dedicated SIMD support for the inner most loop.
-        // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed...
+        // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed, which means that we don't gain much from
+        // loop splitting.
         Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
           def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                            nonLinFunc: highT => highT,
@@ -170,18 +170,26 @@ object RNN extends SpatialApp {
           }
 
           Parallel {
-            ijfoRegs(0) := fusedDotProductWithNonLinear(ijfoMems(0),
-              activationI,
-              biasesMems(0))
-            ijfoRegs(1) := fusedDotProductWithNonLinear(ijfoMems(1),
-              activationJ,
-              biasesMems(1))
-            ijfoRegs(2) := fusedDotProductWithNonLinear(ijfoMems(2),
-              activationF,
-              biasesMems(2))
-            ijfoRegs(3) := fusedDotProductWithNonLinear(ijfoMems(3),
-              activationO,
-              biasesMems(3))
+            Pipe {
+              ijfoRegs(0) := fusedDotProductWithNonLinear(ijfoMems(0),
+                activationI,
+                biasesMems(0))
+            }
+            Pipe {
+              ijfoRegs(1) := fusedDotProductWithNonLinear(ijfoMems(1),
+                activationJ,
+                biasesMems(1))
+            }
+            Pipe {
+              ijfoRegs(2) := fusedDotProductWithNonLinear(ijfoMems(2),
+                activationF,
+                biasesMems(2))
+            }
+            Pipe {
+              ijfoRegs(3) := fusedDotProductWithNonLinear(ijfoMems(3),
+                activationO,
+                biasesMems(3))
+            }
           }
 
           val i = ijfoRegs(0).value
