@@ -58,9 +58,9 @@ object RNNMetaProgrammed extends SpatialApp {
 
     // problem-specific params
     // val batchSize = 1
-    val nHiddenUnits = 128
-    val nFeatures = 128
-    val nTimeSteps = 1
+    val nHiddenUnits = 256
+    val nFeatures = 256
+    val nTimeSteps = 150
     val nGates = 4
 
     val ijfoDRAMs: scala.Array[DRAM2[lowT]] = scala.Array.tabulate(nGates) {
@@ -140,9 +140,9 @@ object RNNMetaProgrammed extends SpatialApp {
         // loop splitting.
 
         Foreach(
-          nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32],
-          (nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32]
-        ) { (ih, iuvTile) =>
+          (nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32],
+          nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]
+        ) { (iuvTile, ih) =>
           def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                            nonLinFunc: highT => highT,
                                            b: SRAM1[lowT]): highT = {
