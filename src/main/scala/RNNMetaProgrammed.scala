@@ -1,7 +1,7 @@
 import spatial.dsl._
 
 @spatial
-object RNNMetaProgrammedDRAM extends SpatialApp {
+object RNNMetaProgrammed extends SpatialApp {
   // This should take 5180 cycles to run...
   def main(args: Array[String]): Unit = {
     // This is describing the LSTM dataflow
