@@ -1,20 +1,12 @@
 import spatial.dsl._
 
 @spatial
-object RNNMetaProgrammed extends SpatialApp {
+object RNNMetaProgrammedDRAM extends SpatialApp {
   // This should take 5180 cycles to run...
   def main(args: Array[String]): Unit = {
     // This is describing the LSTM dataflow
     type lowT = FixPt[TRUE, _4, _4]
     type highT = FixPt[TRUE, _16, _16]
-    val noDRAM: scala.Boolean = true
-    val noDRAMArgIn = ArgIn[I32]
-    val noDRAMArgInVal = ArgIn[lowT]
-    val noDRAMArgOutC = ArgOut[lowT]
-    val noDRAMArgOutH = ArgOut[lowT]
-
-    setArg(noDRAMArgIn, 1.to[I32])
-    setArg(noDRAMArgInVal, 1.to[lowT])
 
     // TODO: how to set these non-linear functions?
     val tanh: highT => highT = x => {
@@ -30,7 +22,6 @@ object RNNMetaProgrammed extends SpatialApp {
 
     val activation: highT => highT = x => {
       // 5-piece activation function
-      // TODO: correct this function at some point...
       val up = 2.5.to[highT]
       val lo = -2.5.to[highT]
       val posMid = 0.5.to[highT]
@@ -48,10 +39,10 @@ object RNNMetaProgrammed extends SpatialApp {
       val loMidCond = (lo < x) && (x <= negMid)
       val loCond = x <= lo
       val y = mux(upCond,
-                  upLin,
-                  mux(upMidCond,
-                      upMidLin,
-                      mux(loMidCond, loMidLin, mux(loCond, loLin, x))))
+        upLin,
+        mux(upMidCond,
+          upMidLin,
+          mux(loMidCond, loMidLin, mux(loCond, loLin, x))))
       y
     }
 
@@ -87,7 +78,6 @@ object RNNMetaProgrammed extends SpatialApp {
         }
         re
     }
-
     ijfoDRAMs zip ijfoData foreach {
       case (mem, data) =>
         setMem(mem, data)
@@ -120,18 +110,12 @@ object RNNMetaProgrammed extends SpatialApp {
             SRAM[lowT](nHiddenUnits, nFeatures + nHiddenUnits)
           re
       }
-
-      if (noDRAM) ijfoMems.foreach {
-        case f =>
-          f(noDRAMArgIn.value, noDRAMArgIn.value) = noDRAMArgInVal.value
-      } else {
-        ijfoMems zip ijfoDRAMs foreach {
-          case (sram, dram) =>
-            sram load dram(
-              0.to[I32] :: nHiddenUnits.to[I32],
-              0.to[I32] :: (nFeatures + nHiddenUnits).to[I32]
-            )
-        }
+      ijfoMems zip ijfoDRAMs foreach {
+        case (sram, dram) =>
+          sram load dram(
+            0.to[I32] :: nHiddenUnits.to[I32],
+            0.to[I32] :: (nFeatures + nHiddenUnits).to[I32]
+          )
       }
 
       val biasesMems: scala.Array[SRAM1[lowT]] = scala.Array.tabulate(nGates) {
@@ -139,32 +123,22 @@ object RNNMetaProgrammed extends SpatialApp {
           val re: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
           re
       }
-
-      if (noDRAM) {
-        biasesMems.foreach {
-          case f =>
-            f(noDRAMArgIn.value) = noDRAMArgInVal.value
-        }
-      } else {
-        biasesMems zip biasesDRAM foreach {
-          case (sram, dram) =>
-            sram load dram(0.to[I32] :: nHiddenUnits.to[I32])
-        }
+      biasesMems zip biasesDRAM foreach {
+        case (sram, dram) =>
+          sram load dram(0.to[I32] :: nHiddenUnits.to[I32])
       }
 
       val xh: SRAM1[lowT] = SRAM[lowT](nFeatures + nHiddenUnits)
       val hNew: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
       val c: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
-
-      if (noDRAM) {
-        xh(noDRAMArgIn.value) = noDRAMArgInVal.value
-        c(noDRAMArgIn.value) = noDRAMArgInVal.value
-      } else {
-        xh load xhDRAM(0.to[I32] :: (nFeatures + nHiddenUnits).to[I32])
-        c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
-      }
+      xh load xhDRAM(0.to[I32] :: (nFeatures + nHiddenUnits).to[I32])
+      c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
 
       Sequential.Foreach(nTimeSteps by 1.to[I32]) { _ =>
+        // TODO: the two-level loop splitting is a CGRA specific optimization.
+        // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed, which means that we don't gain much from
+        // loop splitting.
+
         Foreach(
           (nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32],
           nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]
@@ -172,30 +146,28 @@ object RNNMetaProgrammed extends SpatialApp {
           def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                            nonLinFunc: highT => highT,
                                            b: SRAM1[lowT]): highT = {
-            val elem: highT = List
-              .tabulate(ru * rv) { ii =>
-                val iuv = iuvTile + ii.to[I32]
-                val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
-                re
-              }
-              .sumTree + b(ih).to[highT]
+            val elem: highT = List.tabulate(ru * rv) { ii =>
+              val iuv = iuvTile + ii.to[I32]
+              val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
+              re
+            }.sumTree + b(ih).to[highT]
 
             val re: highT = nonLinFunc(elem)
             re
           }
 
           val i = fusedDotProductWithNonLinear(ijfoMems(0),
-                                               activationI,
-                                               biasesMems(0))
+            activationI,
+            biasesMems(0))
           val j = fusedDotProductWithNonLinear(ijfoMems(1),
-                                               activationJ,
-                                               biasesMems(1))
+            activationJ,
+            biasesMems(1))
           val f = fusedDotProductWithNonLinear(ijfoMems(2),
-                                               activationF,
-                                               biasesMems(2))
+            activationF,
+            biasesMems(2))
           val o = fusedDotProductWithNonLinear(ijfoMems(3),
-                                               activationO,
-                                               biasesMems(3))
+            activationO,
+            biasesMems(3))
 
           val cNew = i * j + c(ih).to[highT] * f
           c(ih) = cNew.to[lowT]
@@ -203,22 +175,13 @@ object RNNMetaProgrammed extends SpatialApp {
         }
       }
 
-      if (noDRAM) {
-        noDRAMArgOutC := c(noDRAMArgIn.value)
-        noDRAMArgOutH := hNew(noDRAMArgIn.value)
-      } else {
-        cResultDRAM store c(0.to[I32] :: nHiddenUnits.to[I32])
-        hResultDRAM store hNew(0.to[I32] :: nHiddenUnits.to[I32])
-      }
+      cResultDRAM store c(0.to[I32] :: nHiddenUnits.to[I32])
+      hResultDRAM store hNew(0.to[I32] :: nHiddenUnits.to[I32])
     }
 
-    if (noDRAM) {
-      print(getArg(noDRAMArgOutC).toText + getArg(noDRAMArgOutH).toText)
-    } else {
-      val cResult = getMem(cResultDRAM)
-      val hResult = getMem(hResultDRAM)
-      printArray(cResult, "c = ")
-      printArray(hResult, "h = ")
-    }
+    val cResult = getMem(cResultDRAM)
+    val hResult = getMem(hResultDRAM)
+    printArray(cResult, "c = ")
+    printArray(hResult, "h = ")
   }
 }
