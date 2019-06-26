@@ -16,3 +16,5 @@ addCompilerPlugin("org.scalamacros" % "paradise" % paradise_version cross CrossV
 libraryDependencies ++= Seq(
   "edu.stanford.cs.dawn" %% "spatial" % "1.1-SNAPSHOT"
 )
+libraryDependencies += "org.jpmml" % "pmml-evaluator" % "1.4.8"
+

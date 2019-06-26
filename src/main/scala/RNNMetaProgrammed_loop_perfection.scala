@@ -1,14 +1,13 @@
 import spatial.dsl._
 
 @spatial
-object RNNMetaProgrammed extends SpatialApp {
+object RNNMetaProgrammed_loop_perfection extends SpatialApp {
   // This should take 5180 cycles to run...
   def main(args: Array[String]): Unit = {
     // This is describing the LSTM dataflow
     type lowT = FixPt[TRUE, _4, _4]
     type highT = FixPt[TRUE, _16, _16]
 
-    // TODO: how to set these non-linear functions?
     val tanh: highT => highT = x => {
       // 0.0001616 + 0.86635 * x - 0.00042018 * x^2 - 0.13333 * x^3
       val x2: highT = x * x
@@ -51,16 +50,14 @@ object RNNMetaProgrammed extends SpatialApp {
     val activationF: highT => highT = activation
     val activationO: highT => highT = activation
 
+    val activations = List(activationI, activationJ, activationF, activationO)
+
     // TODO: what should be the parallelization and vectorization pars?
-    val hu = 2
-    val ru = 8
+    val hu = 1
+    val ru = 4
     val rv = 16
 
     // problem-specific params
-    // val batchSize = 1
-//    val nHiddenUnits = 256
-//    val nFeatures = 256
-//    val nTimeSteps = 150
 
     val nHiddenUnits = 128
     val nFeatures = 128
@@ -132,50 +129,60 @@ object RNNMetaProgrammed extends SpatialApp {
           sram load dram(0.to[I32] :: nHiddenUnits.to[I32])
       }
 
-      val xh: SRAM1[lowT] = SRAM[lowT](nFeatures + nHiddenUnits)
-      val hNew: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
       val c: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
-      xh load xhDRAM(0.to[I32] :: (nFeatures + nHiddenUnits).to[I32])
+      val xh: SRAM1[lowT] = SRAM[lowT](nFeatures + nHiddenUnits)
       c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
+      xh load xhDRAM(0.to[I32] :: (nFeatures + nHiddenUnits).to[I32])
+
+      val hNew: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
+      val cNew: SRAM1[lowT] = SRAM[lowT](nHiddenUnits)
 
       Sequential.Foreach(nTimeSteps by 1.to[I32]) { _ =>
+        val lastIterUV: I32 = (((nHiddenUnits + nFeatures) / (ru * rv) - 1) * (ru * rv)).to[I32]
+        Foreach(
+          nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32],
+          (nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32]
+        ) { (ih, iuvTile) =>
+          val ijfoRegs = List.tabulate(nGates)(_ => Reg[highT])
 
-        Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
-            def fusedDotProductWithNonLinear(w: SRAM2[lowT],
-                                             nonLinFunc: highT => highT,
-                                             b: SRAM1[lowT]): highT = {
-              val elem = Reduce(0.to[highT])((nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32]) { iuvTile =>
-                List.tabulate(ru * rv) { ii =>
-                  val iuv = iuvTile + ii.to[I32]
-                  val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
-                  re
-                }.sumTree
-              }{_+_}.value + b(ih).to[highT]
-
-              nonLinFunc(elem)
-            }
-
-          val activations = List(activationI, activationJ, activationF, activationO)
-          val ijfoRegs = List.tabulate(nGates)(_ => Reg[highT](0.to[highT]))
-          Parallel {
-            ijfoRegs(0) := fusedDotProductWithNonLinear(ijfoMems(0), activations(0), biasesMems(0))
-            ijfoRegs(1) := fusedDotProductWithNonLinear(ijfoMems(1), activations(1), biasesMems(1))
-            ijfoRegs(2) := fusedDotProductWithNonLinear(ijfoMems(2), activations(2), biasesMems(2))
-            ijfoRegs(3) := fusedDotProductWithNonLinear(ijfoMems(3), activations(3), biasesMems(3))
+          def reduceTreeDP(w: SRAM2[lowT]): highT = {
+            List.tabulate(ru * rv) { ii =>
+              val iuv = iuvTile + ii.to[I32]
+              val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
+              re
+            }.sumTree
           }
 
-          val ijfo = ijfoRegs.map(v => v.value)
-          val i = ijfo(0)
-          val j = ijfo(1)
-          val f = ijfo(2)
-          val o = ijfo(3)
-          val cNew = i * j + c(ih).to[highT] * f
-          c(ih) = cNew.to[lowT]
-          hNew(ih) = (tanh(cNew) * o).to[lowT]
+          def addBiasAndNonLinear(src: highT, biasMem: SRAM1[lowT], nonLinFunc: highT => highT): highT = {
+            val elem = src + biasMem(ih).to[highT]
+            nonLinFunc(elem)
+          }
+
+          val accumRegs = List.tabulate(nGates)(_ => Reg[highT])
+          accumRegs.zip(ijfoMems).foreach {
+            case (f: Reg[highT], weight: SRAM2[lowT]) =>
+              if (iuvTile == 0.to[I32])
+                f.reset()
+              else
+                f := reduceTreeDP(weight) + f.value
+          }
+
+          val accums = accumRegs.map(f => f.value)
+
+          if (iuvTile == lastIterUV) {
+            val i: highT = addBiasAndNonLinear(accums(0), biasesMems(0), activations(0))
+            val j: highT = addBiasAndNonLinear(accums(1), biasesMems(1), activations(1))
+            val f: highT = addBiasAndNonLinear(accums(2), biasesMems(2), activations(2))
+            val o: highT = addBiasAndNonLinear(accums(3), biasesMems(3), activations(3))
+
+            val cPrime = i * j + c(ih).to[highT] * f
+            cNew(ih) = cPrime.to[lowT]
+            hNew(ih) = (tanh(cPrime) * o).to[lowT]
+          }
         }
       }
 
-      cResultDRAM store c(0.to[I32] :: nHiddenUnits.to[I32])
+      cResultDRAM store cNew(0.to[I32] :: nHiddenUnits.to[I32])
       hResultDRAM store hNew(0.to[I32] :: nHiddenUnits.to[I32])
     }
 

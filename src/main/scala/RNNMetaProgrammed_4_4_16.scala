@@ -1,7 +1,7 @@
 import spatial.dsl._
 
 @spatial
-object RNNMetaProgrammed extends SpatialApp {
+object RNNMetaProgrammed_4_4_16 extends SpatialApp {
   // This should take 5180 cycles to run...
   def main(args: Array[String]): Unit = {
     // This is describing the LSTM dataflow
@@ -52,8 +52,8 @@ object RNNMetaProgrammed extends SpatialApp {
     val activationO: highT => highT = activation
 
     // TODO: what should be the parallelization and vectorization pars?
-    val hu = 2
-    val ru = 8
+    val hu = 4
+    val ru = 4
     val rv = 16
 
     // problem-specific params
@@ -139,36 +139,40 @@ object RNNMetaProgrammed extends SpatialApp {
       c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
 
       Sequential.Foreach(nTimeSteps by 1.to[I32]) { _ =>
+        // TODO: the two-level loop splitting is a CGRA specific optimization.
+        // TODO: However, on an FPGA, the unrolling and vectorization are both overlayed, which means that we don't gain much from
+        // loop splitting.
 
-        Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
-            def fusedDotProductWithNonLinear(w: SRAM2[lowT],
-                                             nonLinFunc: highT => highT,
-                                             b: SRAM1[lowT]): highT = {
-              val elem = Reduce(0.to[highT])((nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32]) { iuvTile =>
-                List.tabulate(ru * rv) { ii =>
-                  val iuv = iuvTile + ii.to[I32]
-                  val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
-                  re
-                }.sumTree
-              }{_+_}.value + b(ih).to[highT]
+        Foreach(
+          (nHiddenUnits + nFeatures).to[I32] by (ru * rv).to[I32],
+          nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]
+        ) { (iuvTile, ih) =>
+          def fusedDotProductWithNonLinear(w: SRAM2[lowT],
+                                           nonLinFunc: highT => highT,
+                                           b: SRAM1[lowT]): highT = {
+            val elem: highT = List.tabulate(ru * rv) { ii =>
+              val iuv = iuvTile + ii.to[I32]
+              val re: highT = (w(ih, iuv) * xh(iuv)).to[highT]
+              re
+            }.sumTree + b(ih).to[highT]
 
-              nonLinFunc(elem)
-            }
-
-          val activations = List(activationI, activationJ, activationF, activationO)
-          val ijfoRegs = List.tabulate(nGates)(_ => Reg[highT](0.to[highT]))
-          Parallel {
-            ijfoRegs(0) := fusedDotProductWithNonLinear(ijfoMems(0), activations(0), biasesMems(0))
-            ijfoRegs(1) := fusedDotProductWithNonLinear(ijfoMems(1), activations(1), biasesMems(1))
-            ijfoRegs(2) := fusedDotProductWithNonLinear(ijfoMems(2), activations(2), biasesMems(2))
-            ijfoRegs(3) := fusedDotProductWithNonLinear(ijfoMems(3), activations(3), biasesMems(3))
+            val re: highT = nonLinFunc(elem)
+            re
           }
 
-          val ijfo = ijfoRegs.map(v => v.value)
-          val i = ijfo(0)
-          val j = ijfo(1)
-          val f = ijfo(2)
-          val o = ijfo(3)
+          val i = fusedDotProductWithNonLinear(ijfoMems(0),
+            activationI,
+            biasesMems(0))
+          val j = fusedDotProductWithNonLinear(ijfoMems(1),
+            activationJ,
+            biasesMems(1))
+          val f = fusedDotProductWithNonLinear(ijfoMems(2),
+            activationF,
+            biasesMems(2))
+          val o = fusedDotProductWithNonLinear(ijfoMems(3),
+            activationO,
+            biasesMems(3))
+
           val cNew = i * j + c(ih).to[highT] * f
           c(ih) = cNew.to[lowT]
           hNew(ih) = (tanh(cNew) * o).to[lowT]
