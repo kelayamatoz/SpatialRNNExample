@@ -1,4 +1,4 @@
-package BugReportTest
+package BugReportTests
 
 import spatial.dsl._
 

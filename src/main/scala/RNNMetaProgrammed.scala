@@ -139,7 +139,6 @@ object RNNMetaProgrammed extends SpatialApp {
       c load cInitDRAM(0.to[I32] :: nHiddenUnits.to[I32])
 
       Sequential.Foreach(nTimeSteps by 1.to[I32]) { _ =>
-
         Foreach(nHiddenUnits.to[I32] by 1.to[I32] par hu.to[I32]) { ih =>
             def fusedDotProductWithNonLinear(w: SRAM2[lowT],
                                              nonLinFunc: highT => highT,
