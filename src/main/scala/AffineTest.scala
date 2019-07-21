@@ -13,13 +13,20 @@ import spatial.dsl._
     Accel {
       val testMem: SRAM2[T] = SRAM[T](nRows, nCols)
       testMem load dataMem(0.to[I32]::nRows, 0.to[I32]::nCols)
-      Foreach(0 until nRows, 0 until nCols par 3.to[I32]) { (i, j) =>
-        val x0: T = testMem(i * 2.to[I32], 3.to[I32] * i + j * 2.to[I32] - 1.to[I32])
-        val tmp = x0 * 32.to[T]
-        testMem(i * 4.to[I32] + 1.to[I32], j + i * 3.to[I32]) = tmp
+      val testMemOut: SRAM2[T] = SRAM[T](nRows, nCols)
+      Foreach (0 until nRows by 1.to[I32]) { i =>
+        Foreach(0 until nCols by 1.to[I32]) { j  =>
+          val x0: T = testMem(i * 2.to[I32], 3.to[I32] * i + j * 2.to[I32] - 1.to[I32])
+          val tmp = x0 * 32.to[T]
+          testMem(i * 4.to[I32] + 1.to[I32], j + i * 3.to[I32]) = tmp
+        }
+
+        Foreach (0 until nCols by 1.to[I32]) { j =>
+          testMemOut(i, j) = testMem(i, j)
+        }
       }
 
-      dataMemOut(0.to[I32]::nRows, 0.to[I32]::nCols) store testMem
+      dataMemOut(0.to[I32]::nRows, 0.to[I32]::nCols) store testMemOut
     }
 
     printMatrix(getMatrix(dataMem))
