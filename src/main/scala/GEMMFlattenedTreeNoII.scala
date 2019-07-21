@@ -1,7 +1,8 @@
 import spatial.dsl._
 
 @spatial object GEMMFlattenedTreeNoII extends SpatialApp {
-  type T = FixPt[TRUE, _16, _16]
+//  type T = FixPt[TRUE, _16, _16]
+  type T = Int
 
   def main(args: Array[String]): Unit = {
 
@@ -55,7 +56,7 @@ import spatial.dsl._
           }
             .sumTree
         }
-
+        // Might be related to how accum is done with this guy.
         val fList: scala.List[Reg[T]] = scala.List.tabulate[Reg[T]](npFlatten) { _ => Reg[T](0.to[T]).buffer }
         fList.zipWithIndex.foreach {
           case (f, idx) =>
